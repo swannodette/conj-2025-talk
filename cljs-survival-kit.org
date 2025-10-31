@@ -7,11 +7,16 @@ date: 10-31-26
 :DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
 :DSLIDE_ACTIONS: dslide-action-item-reveal :inline t
 :END:
-- You won't believe these animations
-- This is the world's greatest presentation software
-  + But mainly because it integrates with all you programming tools
-
-- DSLIDE_SLIDE_ACTION: Accepts one slide action and its :key value configuration
+  - You won't believe these animations
+  - This is the world's greatest presentation software
+    + But mainly because it integrates with all your programming tools
+  - DSLIDE_SLIDE_ACTION: Accepts one slide action and its :key value configuration
   * DSLIDE_ACTIONS: Can be used to list multiple action classes and their :key value configurations.
-* Next Slide
-** Some other content
+* Some other content
+  - Here I have another list
+  - And another list
+
+# Local Variables:
+# org-indent-mode: nil
+# org-modern-indent-mode: nil
+# End:
