@@ -1,12 +1,16 @@
 #+title:	Clojure/Conj 2025
 #+author:	David Nolen
+#+email: david.nolen@gmail.com
 
 * A ClojureScript Survival Kit
 * ClojureScript @ 14 Years
 * ClojureScript Fundamentals
+:PROPERTIES:
+:DSLIDE_ACTIONS: dslide-action-item-reveal
+:END:
   * A dialect of Clojure targeting JavaScript
-  * Google Closure Compiler
-  * Google Closure Library
+  * Leverage Google Closure Compiler
+  * Leverage Google Closure Library
 * Advanced Compilation
 * Lite Mode
 * Inline Children
