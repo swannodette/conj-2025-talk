@@ -1,7 +1,14 @@
-title: A ClojureScript Survival Kit
-author: David Nolen
-date: 10-31-26
+#+title:	Clojure/Conj 2025
+#+author:	David Nolen
 
+* A ClojureScript Survival Kit
+* ClojureScript @ 14 Years
+* ClojureScript Fundamentals
+  * A dialect of Clojure targeting JavaScript
+  * Google Closure Compiler
+  * Google Closure Library
+* Advanced Compilation
+* Lite Mode
 * Inline Children
 :PROPERTIES:
 :DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
@@ -12,11 +19,17 @@ date: 10-31-26
     * But mainly because it integrates with all your programming tools
   * DSLIDE_SLIDE_ACTION: Accepts one slide action and its :key value configuration
   * DSLIDE_ACTIONS: Can be used to list multiple action classes and their :key value configurations.
-* Some other content
+** Some other content
   * Here I have another list
+    * Subitem
   * And another list
+    * Subitem
+      * Another one
 ** One Level
 *** Next Level
+**** Another level
+  * Something
+  * Another thing
 * Thank You!
 
 # Local Variables:
