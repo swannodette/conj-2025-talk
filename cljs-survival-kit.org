@@ -1,56 +1,35 @@
-#+title:	Clojure/Conj 2025
-#+author:	David Nolen
+#+title: A ClojureScript Survival Kit
+#+date: Clojure/conj 2025
+#+author: David Nolen
 #+email: david.nolen@gmail.com
+#+STARTUP: indent
 
-* A ClojureScript Survival Kit
 * ClojureScript @ 14 Years
-:PROPERTIES:
-:DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
-:END:
-* ClojureScript Fundamentals
-:PROPERTIES:
-:DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
-:DSLIDE_ACTIONS: dslide-action-item-reveal
-:END:
-  * A dialect of Clojure targeting JavaScript
-  * Leverage Google Closure Compiler
-  * Leverage Google Closure Library
+** Longer than I ever wrote JavaScript by hand for a day job (9 years)
+** Is it still relevant?
+*** JavaScript idioms fatigue
+**** HTMX, DataStar, etc.
+** Why not just use TypeScript?
+*** Another brick in the wall
+*** We can assert our differing philosophies without abandoning responsibility
+* JavaScript: Endgame
+** The idea micro-modules and deep dependency graphs was never a good idea
+*** It wasn't a good idea in 2009
+**** And now it's an easy attack vector
+** People like to blame React, but it's really mainstream JavaScript developement that jumped the shark
+*** And it jumped the shark a very long time, the only difference is scale
+* Clojurescript Fundamentals
+** A dialect of Clojure targeting JavaScript
+** Leverage Google Closure Compiler
+** Leverage Google Closure Library
 * Advanced Compilation
-:PROPERTIES:
-:DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
-:END:
 * Lite Mode
-:PROPERTIES:
-:DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
-:END:
-* Inline Children
-:PROPERTIES:
-:DSLIDE_SLIDE_ACTION: dslide-slide-action-child :header nil
-:DSLIDE_ACTIONS: dslide-action-item-reveal :inline t
-:END:
-  * You won't believe these animations
-  * This is the world's greatest presentation software
-    * But mainly because it integrates with all your programming tools
-  * DSLIDE_SLIDE_ACTION: Accepts one slide action and its :key value configuration
-  * DSLIDE_ACTIONS: Can be used to list multiple action classes and their :key value configurations.
-** Some other content
-:PROPERTIES:
-:DSLIDE_SLIDE_ACTION_ARGS: :header nil
-:END:
-  * Here I have another list
-    * Subitem
-  * And another list
-    * Subitem
-      * Another one
-** One Level
-*** Next Level
-**** Another level
-  * Something
-  * Another thing
 * Thank You!
 
 # Local Variables:
-# org-modern-hide-stars: t
+# fill-column: 80
 # org-hide-leading-stars: t
+# org-modern-star: replace
+# org-modern-replace-stars: ("§" "❯" "○" "■" "★")
 # eval: (my/org-variable-heading-sizes)
 # End:
