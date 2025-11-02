@@ -14,10 +14,8 @@
 ** Is it still relevant?
 *** JavaScript idioms fatigue
 **** Framework de jour
-**** HTMX
-***** AJAX nostalgia (not unfounded)
 ** Why not just use TypeScript?
-*** JavaScript idioms fatigue
+*** did we mention JavaScript idioms fatigue?
 *** Another brick in the wall
 **** Software devs somehow miss the darkside of tech consolidation
 *** We can assert our differing philosophies without abandoning responsibility
@@ -28,7 +26,17 @@
 ** People like to blame React, but it's really mainstream JavaScript developement that jumped the shark
 *** And it jumped the shark at birth, the only difference is scale
 * ClojureScript & JavaScript
-** 
+** In the beginning
+*** Script tags & Google Closure Compiler
+** CLJSJS
+*** Like Bower but for ClojureScript
+** Node.js dependencies
+*** It works reasonably well in ClojureScript
+*** Very wellin shadow-cljs
+* Where did we go wrong?
+** Adopting JavaScript complexity regardless of fit
+** Losing sight of the fundamentals
+** Adopt the good ideas lead the way again
 * Clojurescript Fundamentals
 ** A dialect of Clojure targeting JavaScript
 ** Leverage Google Closure Compiler
