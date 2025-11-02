@@ -20,6 +20,11 @@
 *** Another brick in the wall 
 **** Hello, tech consolidation doesn't favor the worker
 *** We can assert our differing philosophies without abandoning our responsibilities
+* What is ClojureScript?
+** A dialect of ClojureScript for target JavaScript running times
+*** large standard library via Google Closure Library
+** REPL integration with JavaScript runtimes (Browser, Node.js)
+*** Interactive development from your environment of your choice
 * A Survival Kit
 ** What do we get out of the box with ClojureScript
 ** The browsers have greatly improved since React was released
