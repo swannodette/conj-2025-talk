@@ -61,4 +61,5 @@
 # org-hide-leading-stars: t
 # org-modern-star: replace
 # org-modern-replace-stars: ("§" "❯" "○" "■" "★")
+# eval: (when org-modern-mode (org-modern-mode -1) (org-modern-mode 1))
 # End:
