@@ -12,6 +12,7 @@
 ** Longer than I ever wrote JavaScript by hand for a day job!
 *** Yay ClojureScript!
 ** Is it still relevant?
+*** personally, I'd rather write Clojure ...
 *** JavaScript idioms fatigue
 *** 2025, no standard library
 ** Why not just use TypeScript?
