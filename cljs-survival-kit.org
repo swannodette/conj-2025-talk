@@ -42,8 +42,18 @@
 ** Leverage Google Closure Compiler
 ** Leverage Google Closure Library
 * Google Closure Library
+** Google stopped maintaining it (externally)
+*** So we forked it
+** Still a rock solid option for a great many tasks
+** Written with a 
 * Advanced Compilation
+** It work's great
+*** But it's not magic!
+** Two aspects of ClojureScript dead code elimination challenging
+*** All the data structures refer to each other
 * Lite Mode
+* Where is all this stuff coming from?
+** Source Map Explorer
 * Thank You!
 
 # Local Variables:
@@ -51,5 +61,4 @@
 # org-hide-leading-stars: t
 # org-modern-star: replace
 # org-modern-replace-stars: ("§" "❯" "○" "■" "★")
-# eval: (my/org-variable-heading-sizes)
 # End:
