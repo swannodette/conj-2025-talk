@@ -6,6 +6,9 @@
 
 * Demo
 [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][CLJS REPL Time]]
+#+begin_src clojure
+(println "Hello world!")
+#+end_src
 * ClojureScript @ 14 Years
 ** Longer than I ever wrote JavaScript by hand for a day job (9 years)
 ** Is it still relevant?
