@@ -17,9 +17,16 @@
 *** 2025, no standard library
 ** Why not just use TypeScript?
 *** did we mention JavaScript idioms fatigue?
-*** Another brick in the wall
+*** Another brick in the wall 
 **** Hello, tech consolidation doesn't favor the worker
-*** We can assert our differing philosophies without abandoning responsibility
+*** We can assert our differing philosophies without abandoning our responsibilities
+* A Survival Kit
+** What do we get out of the box with ClojureScript
+** The browsers have greatly improved since React was released
+*** Can move a considerable amount of logic into new DOM APIs, CSS
+** Remix older lessons with newer lessons
+*** HTMX
+*** a la carte DOM morphing
 * JavaScript Today
 :PROPERTIES:
 :org-image-actual-width: 1000
