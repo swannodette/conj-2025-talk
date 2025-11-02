@@ -70,8 +70,8 @@
 *** If you decomplect
 **** plain Web Components
 ** Web Components work more or less like native components
-*** Thus they work w/ every framework
-*** They work any diffing approach
+*** Thus they work with every framework
+*** They work with any diffing approach
 * Where is all this stuff coming from?
 ** Source Map Explorer
 * Thank You!
