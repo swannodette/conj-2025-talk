@@ -4,8 +4,7 @@
 #+email: david.nolen@gmail.com
 #+STARTUP: indent
 
-* Demo
-[[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][CLJS REPL Time]]
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
 (println "Hello world!")
 #+end_src
