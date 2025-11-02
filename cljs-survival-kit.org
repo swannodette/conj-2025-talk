@@ -9,19 +9,26 @@
 (println "Hello world!")
 #+end_src
 * ClojureScript @ 14 Years
-** Longer than I ever wrote JavaScript by hand for a day job (9 years)
+** Longer than I ever wrote JavaScript by hand for a day job!
+*** Yay ClojureScript!
 ** Is it still relevant?
 *** JavaScript idioms fatigue
-**** HTMX, DataStar, etc.
+**** Framework de jour
+**** HTMX
+***** AJAX nostalgia (not unfounded)
 ** Why not just use TypeScript?
+*** JavaScript idioms fatigue
 *** Another brick in the wall
+**** Software devs somehow miss the darkside of tech consolidation
 *** We can assert our differing philosophies without abandoning responsibility
 * JavaScript: Endgame
-** The idea micro-modules and deep dependency graphs was never a good idea
+** Micro-modules and deep dependency graphs was never a good idea
 *** It wasn't a good idea in 2009
 **** And now it's an easy attack vector
 ** People like to blame React, but it's really mainstream JavaScript developement that jumped the shark
-*** And it jumped the shark a very long time, the only difference is scale
+*** And it jumped the shark at birth, the only difference is scale
+* ClojureScript & JavaScript
+** 
 * Clojurescript Fundamentals
 ** A dialect of Clojure targeting JavaScript
 ** Leverage Google Closure Compiler
