@@ -20,7 +20,9 @@
 **** Software devs somehow miss the darkside of tech consolidation
 *** We can assert our differing philosophies without abandoning responsibility
 * JavaScript
-#+ATTR_ORG: :width 800
+:PROPERTIES:
+:org-image-actual-width: 1000
+:END:
 [[file:fine.jpg]]
 * JavaScript: Endgame
 ** Micro-modules and deep dependency graphs was never a good idea
