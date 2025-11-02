@@ -54,11 +54,19 @@
 ** Still a rock solid option for a great many tasks
 ** Written with a 
 * Advanced Compilation
-** It work's great
-*** But it's not magic!
+** Pay for what you use
+#+begin_src clojure
+(.log js/console "Hello world!")
+#+end_src
+** Closure understand unused literals
 ** Two aspects of ClojureScript dead code elimination challenging
 *** All the data structures refer to each other
+*** Printing
 * Lite Mode
+** Use the original copy-on-write data structures
+*** Much simpler implementations
+** :elide-to-string
+*** printing has to know about all the types
 * Where is all this stuff coming from?
 ** Source Map Explorer
 * Thank You!
