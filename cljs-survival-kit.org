@@ -2,7 +2,7 @@
 #+date: Clojure/conj 2025
 #+author: David Nolen
 #+email: david.nolen@gmail.com
-#+STARTUP: indent
+#+STARTUP: indent inlineimages
 
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
@@ -13,12 +13,15 @@
 *** Yay ClojureScript!
 ** Is it still relevant?
 *** JavaScript idioms fatigue
-**** Framework de jour
+*** 2025, no standard library
 ** Why not just use TypeScript?
 *** did we mention JavaScript idioms fatigue?
 *** Another brick in the wall
 **** Software devs somehow miss the darkside of tech consolidation
 *** We can assert our differing philosophies without abandoning responsibility
+* JavaScript
+#+ATTR_ORG: :width 800
+[[file:fine.jpg]]
 * JavaScript: Endgame
 ** Micro-modules and deep dependency graphs was never a good idea
 *** It wasn't a good idea in 2009
