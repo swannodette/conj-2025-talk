@@ -18,7 +18,7 @@
 ** Why not just use TypeScript?
 *** did we mention JavaScript idioms fatigue?
 *** Another brick in the wall
-**** Software devs somehow miss the darkside of tech consolidation
+**** Hello, tech consolidation doesn't favor the worker
 *** We can assert our differing philosophies without abandoning responsibility
 * JavaScript Today
 :PROPERTIES:
