@@ -33,14 +33,10 @@
 *** The mentality cuts across framework choices
 **** Addiction to trivial dependencies
 *** Semantic versioning 🤡
-* ClojureScript & JavaScript
-** In the beginning
-*** Script tags & Google Closure Compiler
-** CLJSJS
-*** Like Bower but for ClojureScript
-** Node.js dependencies
-*** It works reasonably well in ClojureScript
-*** Very wellin shadow-cljs
+* ClojureScript & JS Status Quo
+** Clojure community lead the jump to React
+** ClojureScript + React is practical
+** But 10+ years on, perhaps time to lead the way again
 * Where did we go wrong?
 ** Adopting JavaScript complexity regardless of fit
 ** Losing sight of the fundamentals
@@ -68,6 +64,14 @@
 *** Much simpler implementations
 ** :elide-to-string
 *** printing has to know about all the types
+* Light DOM Web Components
+** Web Components for a long time synonymous w/ Shadow DOM
+*** Shadow DOM is complected
+*** If you decomplect
+**** plain Web Components
+** Web Components work more or less like native components
+*** Thus they work w/ every framework
+*** They work any diffing approach
 * Where is all this stuff coming from?
 ** Source Map Explorer
 * Thank You!
