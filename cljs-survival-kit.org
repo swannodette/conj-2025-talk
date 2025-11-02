@@ -19,17 +19,19 @@
 *** Another brick in the wall
 **** Software devs somehow miss the darkside of tech consolidation
 *** We can assert our differing philosophies without abandoning responsibility
-* JavaScript
+* JavaScript Today
 :PROPERTIES:
 :org-image-actual-width: 1000
 :END:
 [[file:fine.jpg]]
-* JavaScript: Endgame
-** Micro-modules and deep dependency graphs was never a good idea
+* Easy vs. Simple
+** Micro-modules and deep dependency graphs
 *** It wasn't a good idea in 2009
-**** And now it's an easy attack vector
-** People like to blame React, but it's really mainstream JavaScript developement that jumped the shark
-*** And it jumped the shark at birth, the only difference is scale
+**** Supply chain attacks
+** React is not the problem
+*** The mentality cuts across framework choices
+**** Addiction to trivial dependencies
+*** Semantic versioning 🤡
 * ClojureScript & JavaScript
 ** In the beginning
 *** Script tags & Google Closure Compiler
