@@ -95,6 +95,15 @@
 *** Much simpler implementations
 ** :elide-to-string
 *** printing has to know about all the types
+** The following is 6K brotli
+#+begin_src clojure
+  (->> (map inc (range 10))
+    (filter even?)
+    (partition 2)
+    (drop 1)
+    (mapcat identity)
+    into-array))
+#+end_src
 * Light DOM Web Components
 ** Web Components for a long time synonymous w/ Shadow DOM
 *** Shadow DOM is complected
