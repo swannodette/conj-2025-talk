@@ -21,7 +21,7 @@
 *** More on that later ...
 ** REPL integration with JavaScript runtimes (Browser, Node.js)
 *** Interactive development from your environment of your choice
-** Tightly integrated with Google Closure Compiler Advanced Optimizations
+** Tightly integrated with Google Closure Compiler Advanced Optimizations And What do you think about that?
 *** More on that later ...
 * Why ClojureScript in 2025?
 ** Functional programming
@@ -48,12 +48,12 @@
 *** a la carte DOM morphing
 * JavaScript Today
 :PROPERTIES:
-:org-image-actual-width: 1000
+:org-image-actual-width: 800
 :END:
 [[file:fine.jpg]]
 * JavaScript Tomorrow
 :PROPERTIES:
-:org-image-actual-width: 1000
+:org-image-actual-width: 800
 :END:
 
 [[file:homer.gif]]
