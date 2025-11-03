@@ -27,13 +27,19 @@
 ** Functional programming
 ** REPL Driven Development
 ** Batteries included
-** Maximum functionality / Minimum Artifact
+** Maximum functionality / Minimal Artifact
 ** Radically different approach software development
 * Why not just TypeScript?
 ** Another brick in the wall 
 ** We can assert our differing philosophies without abandoning our responsibilities
 *** The Lisp Curse?
+* A Thought Experiment
+** While the details have changed, ClojureScript value proposition are mostly unchanged from the original release
+** What if we imagine Node.js/NPM never happened?
+*** Can we still be productive?
+*** Do we have to do everything from scratch?
 * A Survival Kit
+** If you were lost in wild with only ClojureScript how would you get anything done.
 ** What do we get out of the box with ClojureScript
 ** The browsers have greatly improved since React was released
 *** Can move a considerable amount of logic into new DOM APIs, CSS
