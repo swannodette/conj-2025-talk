@@ -1,0 +1,5 @@
+{:deps {domina/domina {:mvn/version "1.0.3"}
+        org.clojure/clojurescript {:local/root "../clojurescript"}}
+ :aliases {:build   {:main-opts ["-m" "cljs.main" "-v" "-co" "build.edn" "-c" "lite-mode.core"]}
+           :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "lite-mode.core"]}
+           :repl    {:main-opts ["-m" "cljs.main" "-c" "lite-mode.core" "-r"]}}}

@@ -16,12 +16,12 @@
 #+end_src
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
-** Delivers a signifcant portion of clojure.core 
+** Delivers a significant portion of `clojure.core`
 ** Large standard library via Google Closure Library
 *** More about that later ...
 ** REPL integration with JavaScript runtimes (Browser, Node.js)
 *** Interactive development from your environment of your choice
-** Tightly integrated with Google Closure Advanced Optimizations
+** Tightly integrated with Google Closure Compiler Advanced Optimizations
 *** More about that later ...
 * Why ClojureScript now?
 ** Functional programming
@@ -121,6 +121,7 @@
 * Thank You!
 # Local Variables:
 # fill-column: 80
+# word-wrap: t
 # org-hide-leading-stars: t
 # org-modern-star: replace
 # org-modern-replace-stars: ("§" "❯" "○" "■" "★")
