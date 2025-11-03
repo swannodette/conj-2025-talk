@@ -8,23 +8,32 @@
 #+begin_src clojure
 (println "Hello world!")
 #+end_src
+* What is ClojureScript?
+** A dialect of Clojure that targets JavaScript runtimes
+** Delivers a signifcant portion of clojure.core 
+** Large standard library via Google Closure Library
+*** More about that later ...
+** REPL integration with JavaScript runtimes (Browser, Node.js)
+*** Interactive development from your environment of your choice
+** Tightly integrated with Google Closure Advanced Optimizations
+*** More about that later ...
+* Why ClojureScript now?
+** Functional programming
+** RDD
+*** REPL Driven Development
+** Radically different approach software development
+*** So many JavaScript tools are heading to complexity
 * ClojureScript @ 14 Years
-** Longer than I ever wrote JavaScript by hand for a day job!
-*** Yay ClojureScript!
+** Longer than I ever wrote JavaScript by hand!
 ** Is it still relevant?
 *** personally, I'd rather write Clojure ...
 *** JavaScript idioms fatigue
 *** 2025, no standard library
-** Why not just use TypeScript?
-*** did we mention JavaScript idioms fatigue?
+** Why not just use TypeScript
 *** Another brick in the wall 
 **** Hello, tech consolidation doesn't favor the worker
 *** We can assert our differing philosophies without abandoning our responsibilities
-* What is ClojureScript?
-** A dialect of ClojureScript for target JavaScript running times
-*** large standard library via Google Closure Library
-** REPL integration with JavaScript runtimes (Browser, Node.js)
-*** Interactive development from your environment of your choice
+**** The Lisp Curse?
 * A Survival Kit
 ** What do we get out of the box with ClojureScript
 ** The browsers have greatly improved since React was released
@@ -37,6 +46,7 @@
 :org-image-actual-width: 1000
 :END:
 [[file:fine.jpg]]
+
 * Easy vs. Simple
 ** Micro-modules and deep dependency graphs
 *** It wasn't a good idea in 2009
