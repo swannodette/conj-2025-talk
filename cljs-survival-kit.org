@@ -6,7 +6,13 @@
 
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
-(println "Hello world!")
+  (println "Hello world!")
+  (map #(* % %)
+    (filter even? (take 10 (range))))
+  (assoc {:foo 1} :foo 2)
+  (doc js/Array.indexOf)
+  (doc js/HTMLElement)
+
 #+end_src
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
@@ -46,15 +52,18 @@
 :org-image-actual-width: 1000
 :END:
 [[file:fine.jpg]]
+* JavaScript Tomorrow
+:PROPERTIES:
+:org-image-actual-width: 500
+:END:
 
+[[file:homer.gif]]
 * Easy vs. Simple
-** Micro-modules and deep dependency graphs
-*** It wasn't a good idea in 2009
-**** Supply chain attacks
+** Micro-modules, loading deps N times, and deep dependency graphs
+** Semantic versioning 🤡
 ** React is not the problem
 *** The mentality cuts across framework choices
 **** Addiction to trivial dependencies
-*** Semantic versioning 🤡
 * ClojureScript & JS Status Quo
 ** Clojure community lead the jump to React
 ** ClojureScript + React is practical
@@ -106,5 +115,7 @@
 # org-hide-leading-stars: t
 # org-modern-star: replace
 # org-modern-replace-stars: ("§" "❯" "○" "■" "★")
+# image-animate-loop: t
 # eval: (when org-modern-mode (org-modern-mode -1) (org-modern-mode 1))
+# eval: (my/animate-images)
 # End:
