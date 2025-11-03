@@ -54,7 +54,7 @@
 [[file:fine.jpg]]
 * JavaScript Tomorrow
 :PROPERTIES:
-:org-image-actual-width: 500
+:org-image-actual-width: 1000
 :END:
 
 [[file:homer.gif]]
