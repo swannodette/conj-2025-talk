@@ -16,17 +16,19 @@
 #+end_src
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
-** Delivers a significant portion of `clojure.core`
-** Large standard library via Google Closure Library
-*** More about that later ...
+*** Delivers a significant slice of `clojure.core`
+** Includes a very large standard library via Google Closure Library
+*** More on that later ...
 ** REPL integration with JavaScript runtimes (Browser, Node.js)
 *** Interactive development from your environment of your choice
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations
-*** More about that later ...
-* Why ClojureScript now?
+*** More on that later ...
+* Why ClojureScript in 2025?
 ** Functional programming
 ** RDD
 *** REPL Driven Development
+** Batteries included
+** Maximum functionality / Minimum Artifact
 ** Radically different approach software development
 *** So many JavaScript tools are heading to complexity
 * ClojureScript @ 14 Years
@@ -66,8 +68,8 @@
 **** Addiction to trivial dependencies
 * ClojureScript & JS Status Quo
 ** Clojure community lead the jump to React
-** ClojureScript + React is practical
 ** But 10+ years on, perhaps time to lead the way again
+** ClojureScript + React is practical
 * Where did we go wrong?
 ** Adopting JavaScript complexity regardless of fit
 ** Losing sight of the fundamentals
