@@ -6,7 +6,7 @@
 
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
-  (println "Hello Clojure/conj 2025!!")
+  (println "Hello Clojure/conj 2025!!") 
   (map #(* % %)
     (filter even? (take 10 (range))))
   (assoc {:foo 1} :foo 2)
@@ -30,7 +30,7 @@
 *** Everyone expects X to solve their probablem
 ** What if you can't get to NPM!
 ** What if you can't use any ClojureScript libraries!
-** Living on your wits, your bare hands, and a few simple but powerful tools
+** Living on your wits 🧗, your bare hands 🙌, and a few simple but powerful tools 🛠
 * A Survival Kit
 ** Reviewing what we get out of the box with ClojureScript
 *** cljs.core
