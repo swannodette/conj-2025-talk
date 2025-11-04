@@ -25,17 +25,19 @@
 *** More on that later ...
 * Post-apocalyptic Software Development 🖥💀🧚
 ** Software Zombie Apocalypse!
+*** Everyone expects X to solve their probablem
 ** What if you can't get to NPM!
 ** What if you can't use any ClojureScript libraries!
-** Living on your wits with a handful of simple but powerful tools
+** Living on your wits, your bare hands, and a few simple but powerful tools
 * A Survival Kit
-** If you were lost in wild with only ClojureScript, how would you get anything done.
 ** What do we get out of the box with ClojureScript
+*** cljs.core
+*** goog.*
 ** The browsers have greatly improved since React was released
-*** Can move a considerable amount of logic into new DOM APIs, CSS
+*** Can move a =considerable= amount of logic into new DOM APIs, CSS
 ** Remix older lessons with newer lessons
-*** HTMX
-*** a la carte DOM morphing
+*** AJAX / HTMX
+*** Even you could write your own morphing library!
 * JavaScript Today
 :PROPERTIES:
 :org-image-actual-width: 800
