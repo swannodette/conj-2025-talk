@@ -14,6 +14,8 @@
   (doc js/HTMLElement)
 
 #+end_src
+
+* A Post-apocalyptic fairytale
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Delivers a significant slice of `clojure.core`
@@ -23,23 +25,11 @@
 *** Interactive development from your environment of your choice
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations And What do you think about that?
 *** More on that later ...
-* Why ClojureScript in 2025?
-** Functional programming
-** REPL Driven Development
-** Batteries included
-** Maximum functionality / Minimal Artifact
-** Radically different approach software development
-* Why not just TypeScript?
-** Another brick in the wall 
-** We can assert our differing philosophies without abandoning our responsibilities
-*** The Lisp Curse?
 * A Thought Experiment
-** While the details have changed, ClojureScript value proposition are mostly unchanged from the original release
-** What if we imagine Node.js/NPM never happened?
-*** Can we still be productive?
-*** Do we have to do everything from scratch?
+** Software Zombie Apocalypse
+** Living on your wits with a handful of simple but powerful tools
 * A Survival Kit
-** If you were lost in wild with only ClojureScript how would you get anything done.
+** If you were lost in wild with only ClojureScript, how would you get anything done.
 ** What do we get out of the box with ClojureScript
 ** The browsers have greatly improved since React was released
 *** Can move a considerable amount of logic into new DOM APIs, CSS
@@ -129,10 +119,25 @@
 *** Synchronization complexity
 ** Server management
 *** Hrm ...
-* No need to use NPM, script tags
+* The Book of AJAX
+** innerHTML/outerHTML
+* The Book of React
+** Diffing the DOM
+** Idiomorph
 * Smoothing things out
 ** Using Google Closure to disambiguate methods / namespaces / fields
+* Why ClojureScript in 2025?
+** Functional programming
+** REPL Driven Development
+** Batteries included
+** Maximum functionality / Minimal Artifact
+** Radically different approach software development
 * Thank You!
+* Why not just TypeScript?
+** Another brick in the wall 
+** We can assert our differing philosophies without abandoning our responsibilities
+*** The Lisp Curse?
+* Presentation Variables
 # Local Variables:
 # fill-column: 80
 # word-wrap: t
