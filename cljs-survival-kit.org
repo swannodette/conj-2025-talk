@@ -18,11 +18,11 @@
 *** Delivers a significant slice of `clojure.core`
 ** Includes a very large standard library via Google Closure Library (GCL)
 *** More on that later ...
-** REPL integration with JavaScript runtimes (Browser, Node.js)
-*** Interactive development from your environment of your choice
+** REPL integration with JavaScript runtimes (Browser, Node.js, V8/JSC Mobile)
+*** Stop drawing dead fish
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations
-*** A trivial `cljs.core` program (+ GCL) is ~3mb
-**** After advanced compilation 3 bytes
+*** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
+**** After advanced compilation, ~3 bytes
 *** More on that later ...
 * Post-apocalyptic Software Development: A Fairy Tale
 🖥💀🧚
@@ -30,16 +30,17 @@
 *** Everyone expects X to solve their probablem
 ** What if you can't get to NPM!
 ** What if you can't use any ClojureScript libraries!
-** Living on your wits 🧗, your bare hands 🙌, and a few simple but powerful tools 🛠
+** Living on your wits 🧗, your bare hands 🙌, and a few simple but powerful, composable tools 🛠
 * A Survival Kit
-** Reviewing what we get out of the box with ClojureScript
-*** cljs.core
+** What's in the box
+*** cljs.*
 *** goog.*
-** The browsers have greatly improved since React was released
-*** Can move a =considerable= amount of logic into new DOM APIs, CSS
-** Remix older lessons with newer lessons
+** Thing we forgot were in the box
+*** new DOM APIs
+*** CSS patterns / optimizations
+** Thinking outside the box
 *** AJAX / HTMX
-*** Even you could write your own morphing library!
+*** Morphing - you could write it! (nanomorph.js)
 * JavaScript Today
 :PROPERTIES:
 :org-image-actual-width: 800
