@@ -122,6 +122,13 @@
 ** Can I delegate events
 * How can I make a custom component
 ** Can update that component in a functional way?
+* How can I build an app?
+** Client/Server state management
+*** Synchronization complexity
+** Client state management
+*** Synchronization complexity
+** Server management
+*** Hrm ...
 * No need to use NPM, script tags
 * Smoothing things out
 ** Using Google Closure to disambiguate methods / namespaces / fields
