@@ -13,15 +13,16 @@
   (doc js/Array.indexOf)
   (doc js/HTMLElement)
 #+end_src
-
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Delivers a significant slice of `clojure.core`
-** Includes a very large standard library via Google Closure Library
+** Includes a very large standard library via Google Closure Library (GCL)
 *** More on that later ...
 ** REPL integration with JavaScript runtimes (Browser, Node.js)
 *** Interactive development from your environment of your choice
-** Tightly integrated with Google Closure Compiler Advanced Optimizations And What do you think about that?
+** Tightly integrated with Google Closure Compiler Advanced Optimizations
+*** A trivial `cljs.core` program (+ GCL) is ~3mb
+**** After advanced compilation 3 bytes
 *** More on that later ...
 * Post-apocalyptic Software Development 🖥💀🧚
 ** Software Zombie Apocalypse!
@@ -30,7 +31,7 @@
 ** What if you can't use any ClojureScript libraries!
 ** Living on your wits, your bare hands, and a few simple but powerful tools
 * A Survival Kit
-** What do we get out of the box with ClojureScript
+** Reviewing what we get out of the box with ClojureScript
 *** cljs.core
 *** goog.*
 ** The browsers have greatly improved since React was released
