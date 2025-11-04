@@ -62,11 +62,19 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
+* Light scripting
+** Let's add some interactivity
+** Let's use a REPL
+** Let's build it
+* Let's explore the output
 * Google Closure Library
 ** Google stopped maintaining it (externally)
 *** So we forked it
 ** Still a rock solid option for a great many tasks
 ** Written with a 
+* Time manipulation
+* Internationalization
+* Accessibility
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
