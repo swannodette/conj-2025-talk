@@ -17,10 +17,10 @@
 *** Delivers a significant slice of `clojure.core`
 ** Includes a very large standard library via Google Closure Library (GCL)
 *** More on that later ...
-** REPL integration with JavaScript runtimes(Browser, Node.js, V8/JSC Mobile)
-*** Stop drawing dead fish 
+** REPL integration with JavaScript runtimes (Browser, Node.js, V8/JSC Mobile)
+*** Stop drawing dead fish 🐟
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations
-*** A trivial `cljs.core` program (+ GCL)is ~3mb of JavaScript
+*** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later ...
 * Post-apocalyptic Software Development: A Fairy Tale
