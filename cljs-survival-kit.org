@@ -23,6 +23,27 @@
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later ...
+* JavaScript Today
+:PROPERTIES:
+:org-image-actual-width: 800
+:END:
+[[file:fine.jpg]]
+* JavaScript Tomorrow
+:PROPERTIES:
+:org-image-actual-width: 800
+:END:
+[[file:homer.gif]]
+* ClojureScript + JavaScript Tools
+** A lot of ClojureScript dev is React
+*** We lead the charge, but that's status quo
+** React went from a script tag to an all-encompassing ecosystem
+** The community has a good grasp on succeeding with it
+*** Lots of resources now
+** JavaScript tooling is very easy, but not very simple
+** ClojureScript provides a smaller set of tools to get the job done
+*** Once intimidating, now seems positively tame
+** shadow-cljs, figwheel both permit simpler approach to client dev
+*** If you stick with what ClojureScript actually offers
 * Post-apocalyptic Software Development: A Fairy Tale
 🖥💀🧚
 ** Software Zombie Apocalypse
@@ -41,34 +62,6 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
-* JavaScript Today
-:PROPERTIES:
-:org-image-actual-width: 800
-:END:
-[[file:fine.jpg]]
-* JavaScript Tomorrow
-:PROPERTIES:
-:org-image-actual-width: 800
-:END:
-[[file:homer.gif]]
-* Easy vs. Simple
-** Micro-modules, loading deps N times, and deep dependency graphs
-** Semantic versioning 🤡
-** React is not the problem
-*** The mentality cuts across framework choices
-**** Addiction to trivial dependencies
-* ClojureScript & JS Status Quo
-** Clojure community lead the jump to React
-** But 10+ years on, perhaps time to lead the way again
-** ClojureScript + React is practical
-* Where did we go wrong?
-** Adopting JavaScript complexity regardless of fit
-** Losing sight of the fundamentals
-** Adopt the good ideas lead the way again
-* Clojurescript Fundamentals
-** A dialect of Clojure targeting JavaScript
-** Leverage Google Closure Compiler
-** Leverage Google Closure Library
 * Google Closure Library
 ** Google stopped maintaining it (externally)
 *** So we forked it
@@ -154,11 +147,15 @@
 ** Batteries included
 ** Maximum functionality / Minimal Artifact
 ** Radically different approach software development
-* Thank You!
+* ClojureScript & JS Status Quo
+** Clojure community lead the jump to React
+** But 10+ years on, perhaps time to lead the way again
+** ClojureScript + React is practical
 * Why not just TypeScript?
 ** Another brick in the wall 
 ** We can assert our differing philosophies without abandoning our responsibilities
 *** The Lisp Curse?
+* Thank You!
 * Presentation Variables
 # Local Variables:
 # fill-column: 80
