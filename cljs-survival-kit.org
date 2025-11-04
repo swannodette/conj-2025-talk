@@ -12,7 +12,6 @@
   (assoc {:foo 1} :foo 2)
   (doc js/Array.indexOf)
   (doc js/HTMLElement)
-
 #+end_src
 
 * A Post-apocalyptic fairytale
