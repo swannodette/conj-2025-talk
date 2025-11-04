@@ -6,7 +6,7 @@
 
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
-  (println "Hello world!")
+  (println "Hello Clojure/conj 2025!!")
   (map #(* % %)
     (filter even? (take 10 (range))))
   (assoc {:foo 1} :foo 2)
@@ -14,7 +14,6 @@
   (doc js/HTMLElement)
 #+end_src
 
-* A Post-apocalyptic fairytale
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Delivers a significant slice of `clojure.core`
@@ -24,8 +23,10 @@
 *** Interactive development from your environment of your choice
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations And What do you think about that?
 *** More on that later ...
-* A Thought Experiment
-** Software Zombie Apocalypse
+* Post-apocalyptic Software Development 🖥💀🧚
+** Software Zombie Apocalypse!
+** What if you can't get to NPM!
+** What if you can't use any ClojureScript libraries!
 ** Living on your wits with a handful of simple but powerful tools
 * A Survival Kit
 ** If you were lost in wild with only ClojureScript, how would you get anything done.
