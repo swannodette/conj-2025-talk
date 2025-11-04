@@ -114,6 +114,14 @@
 * Where is all this stuff coming from?
 ** Source Map Explorer
 * Introspect DOM APIs at REPL
+* How can I manipulate the DOM?
+** Setting attributes
+** Setting styles
+* How can I listen for events
+** Can I listen for multiple events
+** Can I delegate events
+* How can I make a custom component
+** Can update that component in a functional way?
 * No need to use NPM, script tags
 * Smoothing things out
 ** Using Google Closure to disambiguate methods / namespaces / fields
