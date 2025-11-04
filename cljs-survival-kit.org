@@ -18,27 +18,28 @@
 *** Delivers a significant slice of `clojure.core`
 ** Includes a very large standard library via Google Closure Library (GCL)
 *** More on that later ...
-** REPL integration with JavaScript runtimes (Browser, Node.js, V8/JSC Mobile)
-*** Stop drawing dead fish
+** REPL integration with JavaScript runtimes(Browser, Node.js, V8/JSC Mobile)
+*** Stop drawing dead fish 
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations
-*** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
+*** A trivial `cljs.core` program (+ GCL)is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later ...
 * Post-apocalyptic Software Development: A Fairy Tale
 🖥💀🧚
-** Software Zombie Apocalypse!
-*** Everyone expects X to solve their probablem
-** What if you can't get to NPM!
-** What if you can't use any ClojureScript libraries!
-** Living on your wits 🧗, your bare hands 🙌, and a few simple but powerful, composable tools 🛠
-* A Survival Kit
+** Software Zombie Apocalypse
+*** Nobody remembers how to do anything anymore!
+** NPM is gone (good riddance!)
+** You can't use any ClojureScript libraries!
+** You have a few git clones on your 💻
+** Inventory: A) Wits 🧗, B) Bare hands 🙌, C) simple, composable tools 🛠
+* A Survival Kit: Looking inside
 ** What's in the box
 *** cljs.*
 *** goog.*
 ** Thing we forgot were in the box
 *** new DOM APIs
 *** CSS patterns / optimizations
-** Thinking outside the box
+** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
 * JavaScript Today
@@ -50,7 +51,6 @@
 :PROPERTIES:
 :org-image-actual-width: 800
 :END:
-
 [[file:homer.gif]]
 * Easy vs. Simple
 ** Micro-modules, loading deps N times, and deep dependency graphs

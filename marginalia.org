@@ -8,8 +8,8 @@
 :PROPERTIES:
 :org-remark-id: c225d8e7
 :org-remark-label: big
-:org-remark-beg: 1055
-:org-remark-end: 1058
+:org-remark-beg: 1054
+:org-remark-end: 1057
 :org-remark-link: [[file:cljs-survival-kit.org::28]]
 :org-remark-original-text: 🖥💀🧚
 :END:
