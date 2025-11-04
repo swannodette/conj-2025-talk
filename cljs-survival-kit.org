@@ -7,8 +7,7 @@
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
   (println "Hello Clojure/conj 2025!!") 
-  (map #(* % %)
-    (filter even? (take 10 (range))))
+  (map #(* % %) (filter even? (take 10 (range))))
   (assoc {:foo 1} :foo 2)
   (doc js/Array.indexOf)
   (doc js/HTMLElement)
@@ -34,8 +33,8 @@
 ** Inventory: A) Wits 🧗, B) Bare hands 🙌, C) simple, composable tools 🛠
 * A Survival Kit: Looking inside
 ** What's in the box
-*** cljs.*
-*** goog.*
+*** cljs.core, cljs.string, cljs.pprint, ...
+*** goog, goog.string, goog.array, ...
 ** Thing we forgot were in the box
 *** new DOM APIs
 *** CSS patterns / optimizations
@@ -106,6 +105,23 @@
 ** Web Components work more or less like native components
 *** Thus they work with every framework
 *** They work with any diffing approach
+* Dynamically Constructing Web Components
+#+begin_src javascript
+  function Popover() {
+      return Reflect.construct(HTMLElement,[],PopOver);
+  }
+
+  PopOver.prototype = Object.create(
+      HTMLElement.prototype, {
+          connectedCallback: {
+              configurable: true,
+              "value": function() {
+                  console.log("WHOA!");
+              }
+          }
+      }
+  );
+#+end_src
 * Where is all this stuff coming from?
 ** Source Map Explorer
 * Introspect DOM APIs at REPL
@@ -124,6 +140,7 @@
 *** Synchronization complexity
 ** Server management
 *** Hrm ...
+* Expanding the toolbox 🏚
 * The Book of AJAX
 ** innerHTML/outerHTML
 * The Book of React
