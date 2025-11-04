@@ -24,7 +24,8 @@
 *** A trivial `cljs.core` program (+ GCL) is ~3mb
 **** After advanced compilation 3 bytes
 *** More on that later ...
-* Post-apocalyptic Software Development 🖥💀🧚
+* Post-apocalyptic Software Development: A Fairy Tale
+🖥💀🧚
 ** Software Zombie Apocalypse!
 *** Everyone expects X to solve their probablem
 ** What if you can't get to NPM!
@@ -85,7 +86,7 @@
 * Lite Mode
 ** Use the original copy-on-write data structures
 *** Much simpler implementations
-** :elide-to-string
+** `:elide-to-string`
 *** printing has to know about all the types
 ** The following is 6K brotli
 #+begin_src clojure

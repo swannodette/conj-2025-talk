@@ -1,0 +1,15 @@
+
+* A ClojureScript Survival Kit
+:PROPERTIES:
+:org-remark-file: cljs-survival-kit.org
+:END:
+
+** 🖥💀🧚
+:PROPERTIES:
+:org-remark-id: c225d8e7
+:org-remark-label: big
+:org-remark-beg: 1061
+:org-remark-end: 1064
+:org-remark-link: [[file:cljs-survival-kit.org::28]]
+:org-remark-original-text: 🖥💀🧚
+:END:
