@@ -23,38 +23,36 @@
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later ...
-* JavaScript Today
+* JavaScript Practice Today
 :PROPERTIES:
 :org-image-actual-width: 800
 :END:
 [[file:fine.jpg]]
-* JavaScript Tomorrow
+* JavaScript Practice Tomorrow
 :PROPERTIES:
 :org-image-actual-width: 800
 :END:
 [[file:homer.gif]]
-* ClojureScript + JavaScript Tools
+* "Because Clojure rocks, and JavaScript reaches" - Some Person
 ** A lot of ClojureScript dev is React
 *** We lead the charge, but now status quo
 ** React went from a script tag to an all-encompassing ecosystem
-*** Many React-likes
-*** Many reactions to React, some less interesting for functional approaches
 ** The community has a good grasp on succeeding with it
-*** React Native
-*** Lots of resources now
+*** Web apps & React Native
 ** JavaScript tooling is very easy, but not very simple
+*** God bless shadow-cljs 🌟, but the complexity continues to pile up
 ** ClojureScript provides a smaller set of tools to get the job done
 *** Once intimidating, now seems positively tame
-** shadow-cljs, figwheel both permit simpler approach to client dev
-*** If you stick with what ClojureScript actually offers
+*** fighweel / shadow-cljs also simple if you drop JS ecosystem integration
 * Post-apocalyptic Software Development: A Fairy Tale
 🖥💀🧚
 ** Software Zombie Apocalypse
 *** Nobody remembers how to do anything anymore!
-** NPM is gone (good riddance!)
-** You can't use any ClojureScript libraries!
-** You have a few git clones on your 💻
-** Inventory: A) Wits 🧗, B) Bare hands 🙌, C) simple, composable tools 🛠
+** Imagine ...
+*** NPM is gone!
+*** No ClojureScript libraries!
+*** You have a few git clones on your 💻
+*** Inventory: A) Wits 🧗, B) Bare hands 🙌, C) simple, composable tools 🛠
 * A Survival Kit: Looking inside
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
