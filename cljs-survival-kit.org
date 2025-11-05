@@ -15,7 +15,7 @@
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Delivers a significant slice of `clojure.core`
-** Includes a very large standard library via Google Closure Library (GCL)
+** Includes a very large JavaScript standard library via Google Closure Library (GCL)
 *** More on that later ...
 ** REPL integration with JavaScript runtimes (Browser, Node.js, V8/JSC Mobile)
 *** Stop drawing dead fish 🐟
@@ -35,9 +35,12 @@
 [[file:homer.gif]]
 * ClojureScript + JavaScript Tools
 ** A lot of ClojureScript dev is React
-*** We lead the charge, but that's status quo
+*** We lead the charge, but now status quo
 ** React went from a script tag to an all-encompassing ecosystem
+*** Many React-likes
+*** Many reactions to React, some less interesting for functional approaches
 ** The community has a good grasp on succeeding with it
+*** React Native
 *** Lots of resources now
 ** JavaScript tooling is very easy, but not very simple
 ** ClojureScript provides a smaller set of tools to get the job done
@@ -81,9 +84,10 @@
 (.log js/console "Hello world!")
 #+end_src
 ** Closure understand unused literals
-** Two aspects of ClojureScript dead code elimination challenging
+** Two aspects of `cljs.core` make dead code elimination challenging
 *** All the data structures refer to each other
-*** Printing
+*** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
+*** Enter `:lite-mode` ... more on that later!
 * Lite Mode
 ** Use the original copy-on-write data structures
 *** Much simpler implementations
