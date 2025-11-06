@@ -77,8 +77,9 @@
   (gstyle/setStyle button "font-size" "100px")
   (gstyle/setStyle button "border-radius" "25px")
   (gstyle/setStyle button
-    #js {:margin-left "100px"
-         :margin-top  "200px"})
+    #js {:margin-left "150px"
+         :margin-top  "200px"
+         :text-stroke "1px white"})
 #+end_src
 * Event handling
 * Google Closure Library
