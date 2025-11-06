@@ -14,12 +14,14 @@
 #+end_src
 * What is ClojureScript?
 ** A dialect of Clojure that targets JavaScript runtimes
-*** Delivers a significant slice of `clojure.core`
-** Includes a very large JavaScript standard library via Google Closure Library (GCL)
+*** Yummy `clojure.core` 🧁
+*** Differences: host, compilation model
+** Google Closure Library (GCL)
 *** More on that later ...
-** REPL integration with JavaScript runtimes (Browser, Node.js, V8/JSC Mobile)
+** REPL integration with JavaScript runtimes
+*** "Hot reloading", yawn 😴
 *** Stop drawing dead fish 🐟
-** Tightly integrated with Google Closure Compiler Advanced Optimizations
+** Google Closure Compiler Advanced Optimizations
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later as well ...
@@ -36,18 +38,14 @@
 * "Clojure rocks ... JS reaches" - Some Person
 ** A lot of ClojureScript dev is React
 *** Clojurists were early adopters
-**** Now functional UI programming is the norm
+**** Functional UI programming status quo
 *** React went from a script tag to an all-encompassing ecosystem
-*** The community has a good grasp on succeeding with it
-**** Web apps & React Native
+*** Viable solution for SPAs / Mobile apps
 ** ... but JavaScript tooling is very "easy" ... not simple
-*** God bless shadow-cljs 🌟, but the complexity never diminshes
-**** Scaling / consolidation
-***** Always leads to downward trajectories for non-shareholders
-*** Convivial Tools
-** ClojureScript provides a simple set of tools to get the job done
-*** Once intimidating, now seems positively tame
-*** fighweel / shadow-cljs also simple if you drop JS ecosystem integration
+*** God bless shadow-cljs 🌟, but complexity lurks 🧛
+*** No interest in fixing the fundamental problem
+**** Just shove the complexity out of sight 🧹
+***** Until of course ... 🤯
 * Post-apocalyptic Software Dev: A Fairy Tale
 🖥💀🧚
 ** Software Zombie Apocalypse
@@ -59,8 +57,7 @@
 *** Inventory:
 **** A) Wits 🐺
 **** B) Bare hands 🙌,
-**** C) simple, composable tools 🛠
-* 
+**** C) simple, composable tools 🛠 
 * A Survival Kit: Looking inside
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
@@ -71,16 +68,9 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
-* Light scripting
-** Let's add some interactivity
-** Let's use a REPL
-** Let's build it
-* Let's explore the output
+* Access / Modify the DOM
+* Event handling
 * Google Closure Library
-** Google stopped maintaining it (externally)
-*** So we forked it
-** Still a rock solid option for a great many tasks
-** Written with a 
 * Time manipulation
 * Internationalization
 * Accessibility
@@ -94,28 +84,6 @@
 *** All the data structures refer to each other
 *** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
 *** Enter `:lite-mode` ... more on that later!
-* Lite Mode
-** Use the original copy-on-write data structures
-*** Much simpler implementations
-** `:elide-to-string`
-*** printing has to know about all the types
-** The following is 6K brotli
-#+begin_src clojure
-  (->> (map inc (range 10))
-    (filter even?)
-    (partition 2)
-    (drop 1)
-    (mapcat identity)
-    into-array))
-#+end_src
-* Light DOM Web Components
-** Web Components for a long time synonymous w/ Shadow DOM
-*** Shadow DOM is complected
-*** If you decomplect
-**** plain Web Components
-** Web Components work more or less like native components
-*** Thus they work with every framework
-*** They work with any diffing approach
 * Dynamically Constructing Web Components
 #+begin_src javascript
   function Popover() {
@@ -133,46 +101,42 @@
       }
   );
 #+end_src
+* Light DOM Web Components
+** Web Components for a long time synonymous w/ Shadow DOM
+*** Shadow DOM is complected
+*** If you decomplect
+**** plain Web Components
+** Web Components work more or less like native components
+*** Thus they work with every framework
+*** They work with any diffing approach
+* Lite Mode
+** Use the original copy-on-write data structures
+*** Much simpler implementations
+** `:elide-to-string`
+*** printing has to know about all the types
+** The following is 6K brotli
+#+begin_src clojure
+  (->> (map inc (range 10))
+    (filter even?)
+    (partition 2)
+    (drop 1)
+    (mapcat identity)
+    into-array))
+#+end_src
 * Where is all this stuff coming from?
 ** Source Map Explorer
-* Introspect DOM APIs at REPL
-* How can I manipulate the DOM?
-** Setting attributes
-** Setting styles
-* How can I listen for events
-** Can I listen for multiple events
-** Can I delegate events
-* How can I make a custom component
-** Can update that component in a functional way?
-* How can I build an app?
-** Client/Server state management
-*** Synchronization complexity
-** Client state management
-*** Synchronization complexity
-** Server management
-*** Hrm ...
-* Expanding the toolbox 🏚
-* The Book of AJAX
-** innerHTML/outerHTML
 * The Book of React
 ** Diffing the DOM
 ** Idiomorph
-* Smoothing things out
-** Using Google Closure to disambiguate methods / namespaces / fields
 * Why ClojureScript in 2025?
 ** Functional programming
 ** REPL Driven Development
 ** Batteries included
 ** Maximum functionality / Minimal Artifact
 ** Radically different approach software development
-* ClojureScript & JS Status Quo
+* ClojureScript
 ** Clojure community lead the jump to React
 ** But 10+ years on, perhaps time to lead the way again
-** ClojureScript + React is practical
-* Why not just TypeScript?
-** Another brick in the wall 
-** We can assert our differing philosophies without abandoning our responsibilities
-*** The Lisp Curse?
 * Thank You!
 🖥💀🧚
 # Local Variables:
