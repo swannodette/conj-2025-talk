@@ -69,6 +69,17 @@
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]]
+#+begin_src clojure
+  (require '[goog.dom :as gdom])
+  (def button (gdom/getElement "click-me"))
+  (. button -id)
+  (require '[goog.style :as gstyle])
+  (gstyle/setStyle button "font-size" "100px")
+  (gstyle/setStyle button "border-radius" "25px")
+  (gstyle/setStyle button
+    #js {:margin-left "100px"
+         :margin-top  "200px"})
+#+end_src
 * Event handling
 * Google Closure Library
 * Time manipulation
