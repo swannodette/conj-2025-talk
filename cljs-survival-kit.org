@@ -83,6 +83,20 @@
          :text-stroke "1px white"})
 #+end_src
 * Event handling
+#+begin_src clojure
+  (require '[goog.dom :as gdom])
+  (require '[goog.events :as gevents])
+  (def button (gdom/getElement "click-me"))
+  (defn update-button [s]
+    ;(gdom/setText s)
+    (gdom/setTextContent button s))
+  (gevents/listen button #js ["click", "mouseenter" "mouseleave"]
+    (fn [e]
+      (case (. e -type)
+        "mouseenter" (update-button "HI!")
+        "mouseleave" (update-button "BYE!")
+        "click" (update-button "OUCH!"))))
+#+end_src
 * Google Closure Library
 * Time manipulation
 * Internationalization
