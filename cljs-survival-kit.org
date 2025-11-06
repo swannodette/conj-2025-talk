@@ -22,7 +22,7 @@
 ** Tightly integrated with Google Closure Compiler Advanced Optimizations
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
-*** More on that later ...
+*** More on that later as well ...
 * JavaScript Practice Today
 :PROPERTIES:
 :org-image-actual-width: 800
@@ -35,15 +35,17 @@
 [[file:homer.gif]]
 * "Because Clojure rocks, and JavaScript reaches" - Some Person
 ** A lot of ClojureScript dev is React
-*** We lead the charge, but now status quo
-** React went from a script tag to an all-encompassing ecosystem
-** The community has a good grasp on succeeding with it
-*** Web apps & React Native
-** JavaScript tooling is very easy, but not very simple
+*** Clojurists were early adopters
+**** Now functional UI programming is the norm
+*** React went from a script tag to an all-encompassing ecosystem
+*** The community has a good grasp on succeeding with it
+**** Web apps & React Native
+** ... but JavaScript tooling is very "easy" ... not simple
 *** God bless shadow-cljs 🌟, but the complexity continues to pile up
 ** ClojureScript provides a smaller set of tools to get the job done
 *** Once intimidating, now seems positively tame
 *** fighweel / shadow-cljs also simple if you drop JS ecosystem integration
+** But how do you do it?
 * Post-apocalyptic Software Development: A Fairy Tale
 🖥💀🧚
 ** Software Zombie Apocalypse
