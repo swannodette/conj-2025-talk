@@ -62,7 +62,7 @@
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
 *** goog, goog.string, goog.array, ...
-** Thing we forgot were in the box
+** Things we forgot were in the box
 *** new DOM APIs
 *** CSS patterns / optimizations
 ** Techniques outside the box 🧠
