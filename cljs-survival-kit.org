@@ -56,7 +56,11 @@
 *** NPM is gone!
 *** No ClojureScript libraries!
 *** You have a few git clones on your 💻
-*** Inventory: A) Wits 🧗, B) Bare hands 🙌, C) simple, composable tools 🛠
+*** Inventory:
+**** A) Wits 🐺
+**** B) Bare hands 🙌,
+**** C) simple, composable tools 🛠
+* 
 * A Survival Kit: Looking inside
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
