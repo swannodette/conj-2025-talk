@@ -33,7 +33,7 @@
 :org-image-actual-width: 800
 :END:
 [[file:homer.gif]]
-* "Because Clojure rocks, and JavaScript reaches" - Some Person
+* "Clojure rocks ... JS reaches" - Some Person
 ** A lot of ClojureScript dev is React
 *** Clojurists were early adopters
 **** Now functional UI programming is the norm
@@ -41,12 +41,14 @@
 *** The community has a good grasp on succeeding with it
 **** Web apps & React Native
 ** ... but JavaScript tooling is very "easy" ... not simple
-*** God bless shadow-cljs 🌟, but the complexity continues to pile up
-** ClojureScript provides a smaller set of tools to get the job done
+*** God bless shadow-cljs 🌟, but the complexity never diminshes
+**** Scaling / consolidation
+***** Always leads to downward trajectories for non-shareholders
+*** Convivial Tools
+** ClojureScript provides a simple set of tools to get the job done
 *** Once intimidating, now seems positively tame
 *** fighweel / shadow-cljs also simple if you drop JS ecosystem integration
-** But how do you do it?
-* Post-apocalyptic Software Development: A Fairy Tale
+* Post-apocalyptic Software Dev: A Fairy Tale
 🖥💀🧚
 ** Software Zombie Apocalypse
 *** Nobody remembers how to do anything anymore!
@@ -168,7 +170,7 @@
 ** We can assert our differing philosophies without abandoning our responsibilities
 *** The Lisp Curse?
 * Thank You!
-* Presentation Variables
+🖥💀🧚
 # Local Variables:
 # fill-column: 80
 # word-wrap: t
