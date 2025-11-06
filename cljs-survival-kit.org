@@ -68,7 +68,7 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
-* Access / Modify the DOM
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]]
 * Event handling
 * Google Closure Library
 * Time manipulation
