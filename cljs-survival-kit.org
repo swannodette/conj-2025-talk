@@ -136,6 +136,14 @@
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
 ** `goog.dom.safe` (sanization)
+* Google Closure Library is unfamiliar
+** LLMs know a lot about Google Closure Library
+** The source is very approachable
+*** Boring code
+*** Lots of comments
+** Project: Hosting GCL docs at the https://clojurescript.org
+*** Would be great to have examples for all of the UI components
+**** With CLJS translations!
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
