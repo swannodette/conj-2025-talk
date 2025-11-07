@@ -193,7 +193,19 @@
     (mapcat identity)
     into-array))
 #+end_src
-* Analying the final artifact
+* "Plain" JavaScript
+#+begin_src javascript
+  import {produce} from "immer"
+  const baseState = [
+      {title: "Learn TypeScript", done: true},
+      {title: "Try Immer" done: false}
+  ]
+  const nextState = produce(baseState, draft => {
+      draft[1].done = true
+      draft.push({title: "Tweet about it"})
+  });
+#+end_src
+* Analyzing the final artifact
 ** Source Map Explorer
 *** Old tool that works perfectly well
 * ClojureScript
