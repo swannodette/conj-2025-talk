@@ -165,9 +165,12 @@
 ** Google Closure Library fresh
 *** Get GCL under our finger tips
 *** Follow and synchronize w/ evolving standards
-*** 
 ** Light DOM morphing
-** Scoped Reactive Signals
+*** Morphdom
+*** Idiomorph
+*** Morphlex
+** Scoped Reactive Signals?
+** See Datastar
 * Light DOM Web Components
 ** Web Components for a long time synonymous w/ Shadow DOM
 *** Shadow DOM is complected
