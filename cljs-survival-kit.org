@@ -84,19 +84,19 @@
 #+end_src
 * Event handling
 #+begin_src clojure
-    (require '[goog.dom :as gdom])
-    (require '[goog.events :as gevents])
-    (def button (gdom/getElement "click-me"))
-    (defn update-button [s]
-      ;(gdom/setText s)
-      (gdom/setTextContent button s))
-    (gevents/listen button
-      #js ["click", "mouseenter" "mouseleave"]
-      (fn [e]
-        (case (. e -type)
-          "mouseenter" (update-button "HI!")
-          "mouseleave" (update-button "BYE!")
-          "click"      (update-button "OUCH!"))))
+  (require '[goog.dom :as gdom])
+  (require '[goog.events :as gevents])
+  (def button (gdom/getElement "click-me"))
+  (defn update-button [s]
+    ;(gdom/setText s)
+    (gdom/setTextContent button s))
+  (gevents/listen button
+    #js ["click", "mouseenter" "mouseleave"]
+    (fn [e]
+      (case (. e -type)
+        "mouseenter" (update-button "HI!")
+        "mouseleave" (update-button "BYE!")
+        "click"      (update-button "OUCH!"))))
 #+end_src
 * Time manipulation
 #+begin_src clojure
@@ -124,10 +124,13 @@
 #+begin_src clojure
 #+end_src
 * And much, much more
-** `goog.dom.selection` (unified DOM selection API)
+** `goog.a11y.aria` (validation)
+** `goog.dom.getActiveElement` (shadow DOM handling)
+** `googl.dom.getDocumentHeight` etc.
+** `goog.dom.selection` (unified DOM selection API, shadow DOM handling)
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
-** `goog.dom.safe`
+** `goog.dom.safe` (sanization)
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
