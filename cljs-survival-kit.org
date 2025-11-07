@@ -106,9 +106,14 @@
   (.log js/console (.add d i))    
 #+end_src
 * Internationalization
+#+begin_src clojure
+#+end_src
 * Accessibility
+#+begin_src clojure
+#+end_src
 * UI Components
-** Popup
+#+begin_src clojure
+#+end_src
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
