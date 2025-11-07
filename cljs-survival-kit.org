@@ -99,6 +99,12 @@
           "click"      (update-button "OUCH!"))))
 #+end_src
 * Time manipulation
+#+begin_src clojure
+  (require '[goog.date])
+  (def d (goog.date/DateTime.))
+  (def i (goog.date.Interval. 0 0 3 1))
+  (.log js/console (.add d i))    
+#+end_src
 * Internationalization
 * Accessibility
 * UI Components
