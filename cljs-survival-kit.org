@@ -141,6 +141,16 @@
       }
   );
 #+end_src
+* Building a new foundation
+** DCE-sensitive ClojureScript libraries
+*** Library authors should be DCE experts
+**** Also test `:lite-mode` true
+** Google Closure Library fresh
+*** Get GCL under our finger tips
+*** Follow and synchronize w/ evolving standards
+*** 
+** Light DOM morphing
+** Scoped Reactive Signals
 * Light DOM Web Components
 ** Web Components for a long time synonymous w/ Shadow DOM
 *** Shadow DOM is complected
@@ -166,10 +176,10 @@
 * Analying the final artifact
 ** Source Map Explorer
 *** Old tool that works perfectly well
-* Building different foundations
-** HTMX
-** Datastar
-** Something new?
+* ClojureScript
+** A Survival Kit is also a blue print for the future
+** ClojureScript should show the world what modern client side development looks like
+*** Not hard! People are wallowing in darkness right now!
 * Thank You!
 🖥💀🧚
 # Local Variables:
