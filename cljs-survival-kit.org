@@ -176,12 +176,15 @@
 ** Web Components work more or less like native components
 *** Thus they work with every framework
 *** They work with any diffing approach
-* Lite Mode
+* Lite Mode & Friends
 ** Use the original copy-on-write data structures
 *** Much simpler implementations
 ** `:elide-to-string`
 *** printing has to know about all the types
-** The following is 6K brotli
+** Rough numbers `:lite-mode` + `:elide-to-string`
+*** `(.log js/console :foo) is` 5K, bytes after compression
+*** `(seq {...})` 6K brotli
+*** The following is 6K brotli:
 #+begin_src clojure
   (->> (map inc (range 10))
     (filter even?)
