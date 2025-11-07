@@ -109,11 +109,10 @@
 * Internationalization
 #+begin_src clojure
   (set! goog.LOCALE "fr")
-  (require '[goog.date]
-           '[goog.i18n])
+  (require '[goog.date :as date])
   (import '[goog.i18n DateTimeFormat])
 
-  (def now (goog.date/DateTime.))
+  (def now (date/DateTime.))
   (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
   (.log js/console (.format fmt now))
 #+end_src
