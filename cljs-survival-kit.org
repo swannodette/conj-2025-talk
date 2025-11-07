@@ -16,6 +16,7 @@
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Yummy `clojure.core` 🧁
 *** Differences: host, compilation model
+**** ClojureScript can compile itself into JavaScript
 ** Google Closure Library (GCL)
 *** More on that later ...
 ** REPL integration with JavaScript runtimes
@@ -66,6 +67,7 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing - you could write it! (nanomorph.js)
+* Data manipulation
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]]
 #+begin_src clojure
   (require '[goog.dom :as gdom])
@@ -96,11 +98,11 @@
           "mouseleave" (update-button "BYE!")
           "click"      (update-button "OUCH!"))))
 #+end_src
-* Google Closure Library
 * Time manipulation
 * Internationalization
 * Accessibility
 * UI Components
+** Popup
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
