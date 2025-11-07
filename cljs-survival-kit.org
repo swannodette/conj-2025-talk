@@ -6,7 +6,7 @@
 
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
 #+begin_src clojure
-  (println "Hello Clojure/conj 2025!!") 
+  (println "Hello Clojure/conj 2025!!")
   (map #(* % %) (filter even? (take 10 (range))))
   (assoc {:foo 1} :foo 2)
   (doc js/Array.indexOf)
@@ -49,10 +49,8 @@
 * Post-apocalyptic Software Dev: A Fairy Tale
 🖥💀🧚
 ** Software Zombie Apocalypse
-*** Nobody remembers how to do anything anymore!
 ** Imagine ...
-*** NPM is gone!
-*** No ClojureScript libraries!
+*** NPM is gone! No ClojureScript libraries!
 *** You have a few git clones on your 💻
 *** Inventory:
 **** A) Wits 🐺
@@ -73,10 +71,10 @@
   (require '[goog.dom :as gdom])
   (def button (gdom/getElement "click-me"))
   (. button -id)
+
   (require '[goog.style :as gstyle])
   (gstyle/setStyle button "font-size" "100px")
-  (gstyle/setStyle button
-    "border-radius" "25px")
+  (gstyle/setStyle button "border-radius" "25px")
   (gstyle/setStyle button
     #js {:margin-left "150px"
          :margin-top  "200px"
@@ -84,23 +82,25 @@
 #+end_src
 * Event handling
 #+begin_src clojure
-  (require '[goog.dom :as gdom])
-  (require '[goog.events :as gevents])
-  (def button (gdom/getElement "click-me"))
-  (defn update-button [s]
-    ;(gdom/setText s)
-    (gdom/setTextContent button s))
-  (gevents/listen button #js ["click", "mouseenter" "mouseleave"]
-    (fn [e]
-      (case (. e -type)
-        "mouseenter" (update-button "HI!")
-        "mouseleave" (update-button "BYE!")
-        "click" (update-button "OUCH!"))))
+    (require '[goog.dom :as gdom])
+    (require '[goog.events :as gevents])
+    (def button (gdom/getElement "click-me"))
+    (defn update-button [s]
+      ;(gdom/setText s)
+      (gdom/setTextContent button s))
+    (gevents/listen button
+      #js ["click", "mouseenter" "mouseleave"]
+      (fn [e]
+        (case (. e -type)
+          "mouseenter" (update-button "HI!")
+          "mouseleave" (update-button "BYE!")
+          "click"      (update-button "OUCH!"))))
 #+end_src
 * Google Closure Library
 * Time manipulation
 * Internationalization
 * Accessibility
+* UI Components
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
@@ -150,20 +150,13 @@
     (mapcat identity)
     into-array))
 #+end_src
-* Where is all this stuff coming from?
+* Analying the final artifact
 ** Source Map Explorer
-* The Book of React
-** Diffing the DOM
-** Idiomorph
-* Why ClojureScript in 2025?
-** Functional programming
-** REPL Driven Development
-** Batteries included
-** Maximum functionality / Minimal Artifact
-** Radically different approach software development
-* ClojureScript
-** Clojure community lead the jump to React
-** But 10+ years on, perhaps time to lead the way again
+*** Old tool that works perfectly well
+* Building different foundations
+** HTMX
+** Datastar
+** Something new?
 * Thank You!
 🖥💀🧚
 # Local Variables:
