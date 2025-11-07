@@ -119,6 +119,11 @@
 #+end_src
 * Accessibility
 #+begin_src clojure
+  (require '[goog.dom :as gdom]
+           '[goog.a11y.aria :as aria])
+  (import '[goog.a11y.aria State])
+  (def button (gdom/getElement "click-me"))
+  (aria/setLabel button "This button does something really cool!")
 #+end_src
 * UI Components
 #+begin_src clojure
@@ -126,8 +131,8 @@
 * And much, much more
 ** `goog.a11y.aria` (validation)
 ** `goog.dom.getActiveElement` (shadow DOM handling)
-** `googl.dom.getDocumentHeight` etc.
-** `goog.dom.selection` (unified DOM selection API, shadow DOM handling)
+** `goog.dom.getDocumentHeight` etc.
+** `goog.dom.selection` (unified DOM selection API)
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
 ** `goog.dom.safe` (sanization)
