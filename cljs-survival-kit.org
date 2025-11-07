@@ -101,13 +101,21 @@
 * Time manipulation
 #+begin_src clojure
   (require '[goog.date])
-  (def d (goog.date/DateTime.))
+  (def now (goog.date/DateTime.))
   ;; 3 days and 1 hour
-  (def i (goog.date.Interval. 0 0 3 1))
-  (.log js/console (.add (.clone d) i))
+  (def 3days+1hour (goog.date.Interval. 0 0 3 1))
+  (.log js/console (.add (.clone now) 3days+1hour))
 #+end_src
 * Internationalization
 #+begin_src clojure
+  (set! goog.LOCALE "fr")
+  (require '[goog.date]
+           '[goog.i18n])
+  (import '[goog.i18n DateTimeFormat])
+
+  (def now (goog.date/DateTime.))
+  (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
+  (.log js/console (.format fmt now))
 #+end_src
 * Accessibility
 #+begin_src clojure
