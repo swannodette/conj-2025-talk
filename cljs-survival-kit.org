@@ -123,6 +123,11 @@
 * UI Components
 #+begin_src clojure
 #+end_src
+* And much, much more
+** `goog.dom.selection` (unified DOM selection API)
+** `goog.dom.animation` (split read/write)
+** `goog.dom.ViewportSizeMonitor`
+** `goog.dom.safe`
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
