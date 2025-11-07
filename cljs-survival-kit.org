@@ -102,8 +102,9 @@
 #+begin_src clojure
   (require '[goog.date])
   (def d (goog.date/DateTime.))
+  ;; 3 days and 1 hour
   (def i (goog.date.Interval. 0 0 3 1))
-  (.log js/console (.add d i))    
+  (.log js/console (.add (.clone d) i))
 #+end_src
 * Internationalization
 #+begin_src clojure
@@ -191,4 +192,5 @@
 # image-animate-loop: t
 # eval: (when org-modern-mode (org-modern-mode -1) (org-modern-mode 1))
 # eval: (my/animate-images)
+# eval: (local-set-key (kbd "C-x C-e") 'my/org-present-eval-last-sexp)
 # End:
