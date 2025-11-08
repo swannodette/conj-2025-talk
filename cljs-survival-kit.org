@@ -11,7 +11,10 @@
   (assoc {:foo 1} :foo 2)
   (doc js/Array.indexOf)
   (doc js/HTMLElement)
-#+end_src
+  (refer-global :only '[Date console])
+  (Date.)
+  (.log console "Hello!")
+#+end_src  
 * What is ClojureScript? 🤔
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Yummy `clojure.core` 🧁
