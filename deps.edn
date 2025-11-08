@@ -1,5 +1,4 @@
-{:deps {domina/domina {:mvn/version "1.0.3"}
-        org.clojure/clojurescript {:local/root "../clojurescript"}}
+{:deps {org.clojure/clojurescript {:local/root "../clojurescript"}}
  :aliases {:build   {:main-opts ["-m" "cljs.main" "-v" "-co" "build.edn" "-c" "conj_2025.core"]}
            :release {:main-opts ["-m" "cljs.main" "-v" "-O" "advanced" "-co" "build.edn" "-c" "conj_2025.core"]}
            :repl    {:main-opts ["-m" "cljs.main" "-c" "conj_2025.core" "-r"]}}}
