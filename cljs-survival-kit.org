@@ -45,9 +45,9 @@
 **** Now Functional UI programming status quo
 **** React went from a script tag to an all-encompassing ecosystem
 *** CLJS+React now mature solution for SPAs / Mobile apps 
-** ... but JavaScript tooling is very "easy" ... not simple
+** ... but JavaScript tooling is "easy" ... not simple
 *** God bless shadow-cljs 🌟, but complexity lurks 🧛
-*** No JS ecosystem interest in fixing the fundamental problem
+*** No JS ecosystem interest in fixing the fundamental problems
 **** Just shove the complexity out of sight 🧹
 ***** Until of course ... 🤯
 * Post-apocalyptic Software Dev: A Fairy Tale
@@ -63,7 +63,7 @@
 * A Survival Kit: Looking inside 🧰
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
-*** goog, goog.string, goog.array, ...
+*** goog, goog.object, goog.string, goog.array, ...
 ** Things we might have forgotten were in the box 👵
 *** DOM APIs
 *** CSS patterns / optimizations
@@ -77,11 +77,11 @@
   (. button -id)
 
   (require '[goog.style :as gstyle])
-  (gstyle/setStyle button "font-size" "100px")
+  (gstyle/setStyle button "font-size" "16px")
   (gstyle/setStyle button "border-radius" "25px")
   (gstyle/setStyle button
-    #js {:margin-left "50px"
-         :margin-top  "25px"
+    #js {:margin-left "5px"
+         :margin-top  "10px"
          :text-stroke "1px white"})
 #+end_src
 * Event handling 💬
@@ -128,11 +128,9 @@
   (import '[goog.a11y.aria State PressedValues])
 
   (def button (gdom/getElement "click-me"))
-
   (def initial-str "This button does something really cool!")
   (aria/setLabel button initial-str)
   (aria/setState button State/PRESSED (. aria/PressedValues -FALSE))
-
   (gevents/listen button "click"
     (fn [_]
       (let [pressed? (= (. PressedValues -TRUE)
@@ -170,12 +168,12 @@
 * GCL is not familiar 👾
 ** LLMs know a lot about Google Closure Library
 *** I asked Claude a bunch of questions for this talk!
-** The source is very approachable
+** The GCL source is very approachable
 *** Really boring code in the best possible way
 *** Lots of comments
-** HELP WANTEED! 👷 GCL docs at the https://clojurescript.org
+** HELP WANTED! 👷 GCL docs at the https://clojurescript.org
 *** Update styling, remove the javascript to navigate
-*** Would be great to have examples for all of the UI components w/ CLJS translations
+*** Would be great to have examples for all of the UI components with CLJS translations
 * Advanced Compilation 🗜
 ** Compiling `cljs.core` generates 1.3mb of JS
 ** Pay for what you use
@@ -233,13 +231,13 @@
 **** Also test `:lite-mode` true
 ** Google Closure Library fresh
 *** Get GCL under our finger tips
-*** Follow and synchronize w/ evolving standards
+*** Follow and synchronize with evolving standards
 ** Light DOM morphing
 *** Morphdom
 *** Idiomorph
 *** Morphlex
 ** Scoped Reactive Signals?
-** See Datastar
+*** See Datastar
 * Light DOM Web Components 🌅
 ** Web Components for a long time synonymous w/ Shadow DOM
 *** Shadow DOM is complected
