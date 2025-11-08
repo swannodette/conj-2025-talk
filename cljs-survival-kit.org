@@ -143,18 +143,15 @@
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
 * And much, much more
-** `goog.a11y.aria` (validation)
+** `goog.a11y.aria` (handles validation)
 ** `goog.dom.getDocumentHeight` etc.
 ** `goog.dom.selection` (unified DOM selection API)
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
 ** `goog.dom.safe` (XSS sanitization)
 ** goog.math.integer (arbitrary precision)
-** goog.math.vec
-** goog.useragent
-** goog.history
-** goog.uri
-** ...
+** goog.ui.* (many, many widgets)
+** goog.math.vec, goog.useragent, goog.histry, goog.uri, goog.crypt.* ...
 * GCL is not familiar 👾
 ** LLMs know a lot about Google Closure Library
 *** I asked Claude a bunch of questions for this talk!
