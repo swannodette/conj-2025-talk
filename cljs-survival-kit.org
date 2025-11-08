@@ -78,8 +78,8 @@
   (gstyle/setStyle button "font-size" "100px")
   (gstyle/setStyle button "border-radius" "25px")
   (gstyle/setStyle button
-    #js {:margin-left "150px"
-         :margin-top  "200px"
+    #js {:margin-left "50px"
+         :margin-top  "25px"
          :text-stroke "1px white"})
 #+end_src
 * Event handling
@@ -88,7 +88,7 @@
   (require '[goog.events :as gevents])
   (def button (gdom/getElement "click-me"))
   (defn update-button [s]
-    ;(gdom/setText s)
+    ;;(gdom/setText s)
     (gdom/setTextContent button s))
   (gevents/listen button
     #js ["click", "mouseenter" "mouseleave"]
@@ -103,8 +103,10 @@
   (require '[goog.date])
   (def now (goog.date/DateTime.))
   ;; 3 days and 1 hour
-  (def 3days+1hour (goog.date.Interval. 0 0 3 1))
-  (.log js/console (.add (.clone now) 3days+1hour))
+  (def interval (goog.date.Interval. 0 0 3 1))
+  (def later (.clone now))
+  (.add later interval)
+  (.log js/console later)
 #+end_src
 * Internationalization
 #+begin_src clojure
