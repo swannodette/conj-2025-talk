@@ -200,8 +200,8 @@
       draft.push({title: "Tweet about it"})
   });
 #+end_src
-** ClojureScript now in the ball park of "hand-written" JS in many cases
-*** Without significant amounts of manual intervention / tooling
+** CLJS now in ballpark of "hand-written" JS in many cases
+*** Without manual intervention / customized tooling
 * Building a new foundation 🏙
 ** DCE-sensitive ClojureScript libraries
 *** Library authors should be DCE experts
