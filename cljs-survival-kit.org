@@ -37,11 +37,11 @@
 :END:
 [[file:homer.gif]]
 * "Clojure rocks ... JS reaches" - Some Person
-** A lot of ClojureScript dev is React
+** A significant slide of ClojureScript dev is React
 *** Clojurists were early adopters
-**** Functional UI programming status quo
-*** React went from a script tag to an all-encompassing ecosystem
-*** Viable solution for SPAs / Mobile apps
+**** Now Functional UI programming status quo
+**** React went from a script tag to an all-encompassing ecosystem
+*** CLJS+React mature solution for SPAs / Mobile apps 
 ** ... but JavaScript tooling is very "easy" ... not simple
 *** God bless shadow-cljs 🌟, but complexity lurks 🧛
 *** No interest in fixing the fundamental problem
@@ -61,12 +61,12 @@
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
 *** goog, goog.string, goog.array, ...
-** Things we forgot were in the box
-*** new DOM APIs
+** Things we might have forgotten were in the box 👵
+*** DOM APIs
 *** CSS patterns / optimizations
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
-*** Morphing - you could write it! (nanomorph.js)
+*** Morphing
 * Data manipulation
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]]
 #+begin_src clojure
@@ -229,6 +229,11 @@
 * Analyzing the final artifact
 ** Source Map Explorer
 *** Old tool that works perfectly well
+* ClojureScript is a tool
+** Use it for jQuery-style development
+** Use it for HTMX-style development
+** Use it for D*-style development
+** Invent something new that bucks the status quo!
 * ClojureScript
 ** A Survival Kit is also a blue print for the future
 ** ClojureScript should show the world what modern client side development looks like
