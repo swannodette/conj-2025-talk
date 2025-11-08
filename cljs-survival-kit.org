@@ -199,7 +199,8 @@
 *** They work with any diffing approach
 * Lite Mode & Friends
 ** Use the original copy-on-write data structures
-*** Much simpler implementations
+*** Much, much simpler implementations
+**** Simpler relationships
 ** `:elide-to-string`
 *** printing has to know about all the types
 ** Rough numbers `:lite-mode` + `:elide-to-string`
@@ -214,8 +215,8 @@
     (mapcat identity)
     into-array))
 #+end_src
-* "Plain" JavaScript
-#+begin_src javascript
+* "Plain" JavaScript (~4K gzipped)
+#+begin_src javascript 
   import {produce} from "immer"
   const baseState = [
       {title: "Learn TypeScript", done: true},
@@ -226,6 +227,13 @@
       draft.push({title: "Tweet about it"})
   });
 #+end_src
+* Lightweight Labs Demo
+** 13K gzipped CLJS vs. 6mb
+*** Mostly WebComponent glue
+**** Don't need persistent data structures at all
+** 20X-37X less memory
+** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
+** Scripting/Paint 1.5:1 vs. 40:1
 * Analyzing the final artifact
 ** Source Map Explorer
 *** Old tool that works perfectly well
@@ -234,10 +242,6 @@
 ** Use it for HTMX-style development
 ** Use it for D*-style development
 ** Invent something new that bucks the status quo!
-* ClojureScript
-** A Survival Kit is also a blue print for the future
-** ClojureScript should show the world what modern client side development looks like
-*** Not hard! People are wallowing in darkness right now!
 * Thank You!
 🖥💀🧚
 # Local Variables:
