@@ -26,12 +26,12 @@
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later as well ...
-* JavaScript Practice Today
+* JavaScript Practice Today 📅
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
 [[file:fine.jpg]]
-* JavaScript Practice Tomorrow
+* JavaScript Practice Tomorrow 📆
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
@@ -204,7 +204,7 @@
 *** Morphlex
 ** Scoped Reactive Signals?
 ** See Datastar
-* Light DOM Web Components
+* Light DOM Web Components 🌅
 ** Web Components for a long time synonymous w/ Shadow DOM
 *** Shadow DOM is complected
 *** If you decomplect
@@ -236,13 +236,13 @@
 ** 20X-37X less memory
 ** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 ** Scripting/Paint 1.5:1 vs. 40:1
-* ClojureScript adapts!
+* ClojureScript adapts! 
 ** Use it for jQuery-style development
 ** Use it for React-sytle development
 ** Use it for HTMX-style development
 ** Use it for D*-style development
 ** Invent something new that bucks the status quo!
-* Thank You!
+* Thank You! 🫶
 🖥💀🧚
 # Local Variables:
 # fill-column: 80
