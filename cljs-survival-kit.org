@@ -40,7 +40,7 @@ is ~3mb of JavaScript
 :END:
 [[file:homer.gif]]
 * "Clojure rocks ... JS reaches"
-** A significant slide of ClojureScript dev is React
+** A significant slice of ClojureScript dev is React
 *** Clojurists were early adopters
 **** Now Functional UI programming status quo
 **** React went from a script tag to an all-encompassing ecosystem
@@ -60,7 +60,7 @@ is ~3mb of JavaScript
 **** A) Wits 🐺
 **** B) Bare hands 🙌,
 **** C) simple, composable tools 🛠 
-* A Survival Kit: Looking inside 🗃
+* A Survival Kit: Looking inside 🧰
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
 *** goog, goog.string, goog.array, ...
@@ -70,7 +70,7 @@ is ~3mb of JavaScript
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]] ✏
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]] 📖 ✏
 #+begin_src clojure
   (require '[goog.dom :as gdom])
   (def button (gdom/getElement "click-me"))
