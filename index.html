@@ -20,7 +20,8 @@
         gap: 1rem;
       }
 
-      .popover {
+      #popover {
+        visibility: hidden;
         width: max-content;
         position: absolute;
         /*display: none;*/
@@ -42,7 +43,7 @@
       <button id="click-me">CLJS Rocks! 🎸</button>
     </main>
     <div id="portal">
-      <div class="popover">
+      <div id="popover">
         Hello, I'm a popover 🍿!
       </div>
     </div>

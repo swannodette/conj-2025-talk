@@ -128,6 +128,19 @@
 #+end_src
 * Positioning 🧩
 #+begin_src clojure
+  (require '[goog.dom :as gdom]
+           '[goog.positioning :as gpos]
+           '[goog.style :as gstyle])
+  (import '[goog.positioning Corner AnchoredPosition])
+
+  (def button (gdom/getElement "click-me"))
+  (def popover (gdom/getElement "popover"))
+
+  (gpos/positionAtAnchor
+    button (. Corner -BOTTOM_LEFT)
+    popover (. Corner -TOP_LEFT))
+  
+  (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
 * And much, much more
 ** `goog.a11y.aria` (validation)
