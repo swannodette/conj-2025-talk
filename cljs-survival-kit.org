@@ -181,7 +181,13 @@
     (mapcat identity)
     into-array))
 #+end_src
-* Analyzing the final artifact - Source Map Explorer
+* The final artifact (20k/6k brotli)
+:PROPERTIES:
+:org-image-actual-width: 700
+:END:
+[[file:smap.jpg]]
+
+
 * "Plain" JavaScript (~4K gzipped)
 #+begin_src javascript 
   import {produce} from "immer"
