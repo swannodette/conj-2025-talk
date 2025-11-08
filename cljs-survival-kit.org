@@ -122,23 +122,18 @@
   (require '[goog.a11y.aria :as aria]
            '[goog.dom :as gdom]
            '[goog.events :as gevents])
-  (import '[goog.a11y.aria State PressedValues])
+  (import '[goog.a11y.aria State PressedValues LivePriority])
 
   (def button (gdom/getElement "click-me"))
-
   (def initial-str "This button does something really cool!")
   (aria/setLabel button initial-str)
-  (aria/setState button State/PRESSED (. aria/PressedValues -FALSE))
-
+  (aria/setState button State/PRESSED (. PressedValues -FALSE))
+  (aria/setState button State/LIVE "polite")        
   (gevents/listen button "click"
     (fn [_]
-      (let [pressed? (= (. PressedValues -TRUE)
-                        (aria/getState button State/PRESSED))]
-        (if pressed?
-          (aria/setState button State/PRESSED (. PressedValues -FALSE))
-          (aria/setState button State/PRESSED (. PressedValues -TRUE)))
-        (aria/setLabel button 
-          (if pressed? "Isn't this really cool?" initial-str)))))
+      (aria/toggleState button State/PRESSED)
+      (let [on? (aria/getStateBoolean button State/PRESSED)]
+        (aria/setLabel button (if on? "Isn't this really cool?" initial-str)))))
 #+end_src
 * Positioning 🧩
 #+begin_src clojure
