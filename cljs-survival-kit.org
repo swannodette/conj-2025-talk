@@ -126,7 +126,7 @@
   (aria/setLabel button "This button does something really cool!")
   ;; TODO: change state, update label
 #+end_src
-* UI Components 🧩
+* Positioning 🧩
 #+begin_src clojure
 #+end_src
 * And much, much more

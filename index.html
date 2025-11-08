@@ -19,12 +19,33 @@
         align-items: center;
         gap: 1rem;
       }
+
+      .popover {
+        width: max-content;
+        position: absolute;
+        /*display: none;*/
+        background-color: #333;
+        padding: 0.5em 1em;
+        border-radius: 8px;
+        font-size: 10px;
+        font-family: sans-serif;
+        color: white;
+      }
+
+      #portal {
+        position: relative;
+      }
     </style>
   </head>
   <body>
     <main>
       <button id="click-me">CLJS Rocks! 🎸</button>
     </main>
+    <div id="portal">
+      <div class="popover">
+        Hello, I'm a popover 🍿!
+      </div>
+    </div>
     <script src=".cljs_browser_repl/main.js" type="text/javascript"></script>
   </body>
 </html>
