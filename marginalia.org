@@ -1,37 +1,27 @@
 
 * A ClojureScript Survival Kit
+
+* A ClojureScript Survival Kit
 :PROPERTIES:
 :org-remark-file: cljs-survival-kit.org
 :END:
 
 ** 🖥💀🧚
+:PROPERTIES:
+:org-remark-id: a96baf4c
+:org-remark-label: big
+:org-remark-beg: 9296
+:org-remark-end: 9299
+:org-remark-link: [[file:cljs-survival-kit.org::285]]
+:org-remark-original-text: 🖥💀🧚
+:END:
 
 ** 🖥💀🧚
 :PROPERTIES:
-:org-remark-id: 16dee1e3
+:org-remark-id: 07520175
 :org-remark-label: big
 :org-remark-beg: 1867
 :org-remark-end: 1870
 :org-remark-link: [[file:cljs-survival-kit.org::54]]
-:org-remark-original-text: 🖥💀🧚
-:END:
-
-** 🖥💀🧚
-:PROPERTIES:
-:org-remark-id: 7886c212
-:org-remark-label: big
-:org-remark-beg: 9089
-:org-remark-end: 9092
-:org-remark-link: [[file:cljs-survival-kit.org::274]]
-:org-remark-original-text: 🖥💀🧚
-:END:
-
-** 🖥💀🧚
-:PROPERTIES:
-:org-remark-id: 4f88a7a9
-:org-remark-label: big
-:org-remark-beg: 9285
-:org-remark-end: 9288
-:org-remark-link: [[file:cljs-survival-kit.org::285]]
 :org-remark-original-text: 🖥💀🧚
 :END:

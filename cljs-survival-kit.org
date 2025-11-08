@@ -164,7 +164,7 @@
 ** `goog.ui.*` (autocomplete, tooltips, treecontrol, datepicker ...)
 ** `goog.math.vec`
 ** `goog.useragent`
-** `goog.history`
+** `goog.history` `goog.uri`
 ** `goog.uri`
 ** `goog.crypt.*`
 ** ...
