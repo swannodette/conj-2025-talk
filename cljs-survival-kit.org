@@ -88,10 +88,12 @@
 #+begin_src clojure
   (require '[goog.dom :as gdom])
   (require '[goog.events :as gevents])
+
   (def button (gdom/getElement "click-me"))
   (defn update-button [s]
     ;;(gdom/setText s)
     (gdom/setTextContent button s))
+
   (gevents/listen button
     #js ["click", "mouseenter" "mouseleave"]
     (fn [e]
@@ -126,12 +128,11 @@
            '[goog.dom :as gdom]
            '[goog.events :as gevents])
   (import '[goog.a11y.aria State PressedValues LivePriority])
-
   (def button (gdom/getElement "click-me"))
   (def initial-str "This button does something really cool!")
   (aria/setLabel button initial-str)
   (aria/setState button State/PRESSED (. PressedValues -FALSE))
-  (aria/setState button State/LIVE "polite")        
+  (aria/setState button State/LIVE "polite")
   (gevents/listen button "click"
     (fn [_]
       (aria/toggleState button State/PRESSED)
@@ -155,13 +156,19 @@
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
 * And much, much more
-** `goog.dom.getDocumentHeight`, `goog.dom.ViewportSizeMonitor`, etc.
+** `goog.dom.getDocumentHeight`, etc.
 ** `goog.dom.selection`
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.safe` (XSS sanitization)
-** goog.math.integer (arbitrary precision)
-** goog.ui.* (autocomplete, tooltips, treecontrol, datepicker ...)
-** goog.math.vec, goog.useragent, goog.history, goog.uri, goog.crypt.* ...
+** `goog.math.integer` (arbitrary precision)
+** `goog.ui.*` (autocomplete, tooltips, treecontrol, datepicker ...)
+** `goog.math.vec`
+** `goog.useragent`
+** `goog.history`
+** `goog.uri`
+** `goog.crypt.*`
+** ...
+
 * GCL is not familiar 👾
 ** LLMs know a lot about Google Closure Library
 *** I asked Claude a bunch of questions for this talk!
@@ -222,13 +229,14 @@
 #+end_src
 ** CLJS now in ballpark of "hand-written" JS in many cases
 *** Without manual intervention / customized tooling
-* Building a new foundation 🏙
+* Building a new foundation *(🏜 → 🏙)
 ** DCE-sensitive ClojureScript libraries
-*** Library authors should be DCE experts
+*** Library authors should be familiar with DCE behavior
 **** Also test `:lite-mode` true
-** Google Closure Library fresh
+** Keep Google Closure Library fresh
 *** Get GCL under our finger tips
 *** Follow and synchronize with evolving standards
+*** We control it! Improve, cleanup as commuinity see's fit
 ** Light DOM morphing
 *** Morphdom
 *** Idiomorph
@@ -267,12 +275,12 @@
 ** 20X-37X less memory
 ** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 ** Scripting/Paint 1.5:1 vs. 40:1
-* ClojureScript adapts!
-** Use it for jQuery-style development
-** Use it for React-sytle development
-** Use it for HTMX-style development
-** Use it for D*-style development
-** Invent something new that bucks the status quo!
+* ClojureScript Adapts 
+** Use it for jQuery-style development (2006)
+** Use it for React-style development (2013)
+** Use it for HTMX-style development (2005)
+** Use it for D*-style development (2025)
+** Invent something new that bucks the status quo! 👽
 * Thank You! 🫶
 🖥💀🧚
 # Local Variables:
