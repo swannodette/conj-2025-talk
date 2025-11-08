@@ -136,6 +136,12 @@
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
 ** `goog.dom.safe` (XSS sanitization)
+** goog.math.integer (arbitrary precision)
+** goog.math.vec
+** goog.useragent
+** goog.history
+** goog.uri
+** ...
 * GCL is not familiar
 ** LLMs know a lot about Google Closure Library
 *** I know a bit, but I asked Claude a bunch of questions for this talk!
