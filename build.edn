@@ -1,5 +1,5 @@
 {:output-to          "out/main.js"
- ;:source-map         "out/main.js.map"
+ :source-map         "out/main.js.map"
  :output-dir         "out"
  ;:closure-source-map true
  :lite-mode          true
