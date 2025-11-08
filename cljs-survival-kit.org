@@ -142,21 +142,20 @@
 ** goog.history
 ** goog.uri
 ** ...
-* GCL is not familiar
+* GCL is not familiar 👾
 ** LLMs know a lot about Google Closure Library
-*** I know a bit, but I asked Claude a bunch of questions for this talk!
+*** I asked Claude a bunch of questions for this talk!
 ** The source is very approachable
 *** Really boring code in the best possible way
 *** Lots of comments
-** Cool Project: GCL docs at the https://clojurescript.org
+** HELP WANTEED! 👷 GCL docs at the https://clojurescript.org
 *** Update styling, remove the javascript to navigate
 *** Would be great to have examples for all of the UI components w/ CLJS translations
-**** With CLJS translations!
 * Advanced Compilation
+** Compiling `cljs.core` generates 1.3mb of JS
 ** Pay for what you use
-#+begin_src clojure
-(.log js/console "Hello world!")
-#+end_src
+*** If you just print a string, throw the rest away
+*** `(.log console "Hello!")` should emit only that!
 ** Two aspects of `cljs.core` make dead code elimination challenging
 *** All the data structures refer to each other
 *** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
