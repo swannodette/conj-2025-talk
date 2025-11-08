@@ -12,18 +12,21 @@
   (doc js/Array.indexOf)
   (doc js/HTMLElement)
 #+end_src
-* What is ClojureScript?
+* What is ClojureScript? 🗺
 ** A dialect of Clojure that targets JavaScript runtimes
 *** Yummy `clojure.core` 🧁
 *** Differences: host, compilation model
 **** ClojureScript can compile itself into JavaScript
-** Google Closure Library (GCL)
+** Google Closure Library
+(GCL)
 *** More on that later ...
 ** REPL integration with JavaScript runtimes
 *** "Hot reloading", yawn 😴
 *** Stop drawing dead fish 🐟
 ** Google Closure Compiler Advanced Optimizations
-*** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
+*** A trivial `cljs.core` program
+(+ GCL)
+is ~3mb of JavaScript
 **** After advanced compilation, ~3 bytes
 *** More on that later as well ...
 * JavaScript Practice Today 📅
@@ -36,7 +39,7 @@
 :org-image-actual-width: 700
 :END:
 [[file:homer.gif]]
-* "Clojure rocks ... JS reaches" - Some Person
+* "Clojure rocks ... JS reaches"
 ** A significant slide of ClojureScript dev is React
 *** Clojurists were early adopters
 **** Now Functional UI programming status quo
@@ -57,7 +60,7 @@
 **** A) Wits 🐺
 **** B) Bare hands 🙌,
 **** C) simple, composable tools 🛠 
-* A Survival Kit: Looking inside
+* A Survival Kit: Looking inside 🗃
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
 *** goog, goog.string, goog.array, ...
@@ -67,7 +70,7 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]]
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]] ✏
 #+begin_src clojure
   (require '[goog.dom :as gdom])
   (def button (gdom/getElement "click-me"))
@@ -81,7 +84,7 @@
          :margin-top  "25px"
          :text-stroke "1px white"})
 #+end_src
-* Event handling
+* Event handling 💬
 #+begin_src clojure
   (require '[goog.dom :as gdom])
   (require '[goog.events :as gevents])
@@ -97,7 +100,7 @@
         "mouseleave" (update-button "BYE!")
         "click"      (update-button "OUCH!"))))
 #+end_src
-* Time manipulation
+* Time manipulation 🕰
 #+begin_src clojure
   (require '[goog.date])
   (def now (goog.date/DateTime.))
@@ -107,7 +110,7 @@
   (.add later interval)
   (.log js/console later)
 #+end_src
-* Internationalization
+* Internationalization 🌎
 #+begin_src clojure
   (set! goog.LOCALE "fr")
   (require '[goog.date :as date])
@@ -117,7 +120,7 @@
   (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
   (.log js/console (.format fmt now))
 #+end_src
-* Accessibility
+* Accessibility ∀
 #+begin_src clojure
   (require '[goog.dom :as gdom]
            '[goog.a11y.aria :as aria])
@@ -126,7 +129,7 @@
   (aria/setLabel button "This button does something really cool!")
   ;; TODO: change state, update label
 #+end_src
-* UI Components
+* UI Components 🧩
 #+begin_src clojure
 #+end_src
 * And much, much more
@@ -151,7 +154,7 @@
 ** HELP WANTEED! 👷 GCL docs at the https://clojurescript.org
 *** Update styling, remove the javascript to navigate
 *** Would be great to have examples for all of the UI components w/ CLJS translations
-* Advanced Compilation
+* Advanced Compilation 🗜
 ** Compiling `cljs.core` generates 1.3mb of JS
 ** Pay for what you use
 *** If you just print a string, throw the rest away
@@ -163,7 +166,7 @@
 ** If you're designing a library you should have strong intuition about problematic patterns
 *** Top level side effects (non-namespace stuff)
 **** Multimethods / Atoms
-* Lite Mode & Friends
+* Lite Mode & Friends 🔬
 ** Use the original copy-on-write data structures
 *** Much, much simpler implementations
 **** Simpler relationships
@@ -181,14 +184,14 @@
     (mapcat identity)
     into-array))
 #+end_src
-* The final artifact (20k/6k brotli)
+* The final artifact (20k/6k brotli) 🔍
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
 [[file:smap.jpg]]
 
 
-* "Plain" JavaScript (~4K gzipped)
+* "Plain" JavaScript (~4K gzipped) 
 #+begin_src javascript 
   import {produce} from "immer"
   const baseState = [
