@@ -1,6 +1,6 @@
 (ns conj-2025.core
   (:require [goog.a11y.aria :as aria]
-            [gogo.date :as gdate]
+            [goog.date :as gdate]
             [goog.dom :as gdom]
             [goog.events :as gevents]
             [goog.style :as gstyle])
