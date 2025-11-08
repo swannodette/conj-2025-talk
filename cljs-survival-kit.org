@@ -125,36 +125,40 @@
   (import '[goog.a11y.aria State])
   (def button (gdom/getElement "click-me"))
   (aria/setLabel button "This button does something really cool!")
+  ;; TODO: change state, update label
 #+end_src
 * UI Components
 #+begin_src clojure
 #+end_src
 * And much, much more
 ** `goog.a11y.aria` (validation)
-** `goog.dom.getActiveElement` (shadow DOM handling)
 ** `goog.dom.getDocumentHeight` etc.
 ** `goog.dom.selection` (unified DOM selection API)
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
 ** `goog.dom.safe` (sanization)
-* Google Closure Library is unfamiliar
+* GCL is not familiar
 ** LLMs know a lot about Google Closure Library
+*** I know a bit, but I asked Claude a bunch of questions for this talk!
 ** The source is very approachable
-*** Boring code
+*** Really boring code in the best possible way
 *** Lots of comments
-** Project: Hosting GCL docs at the https://clojurescript.org
-*** Would be great to have examples for all of the UI components
+** Cool Project: GCL docs at the https://clojurescript.org
+*** Update styling, remove the javascript to navigate
+*** Would be great to have examples for all of the UI components w/ CLJS translations
 **** With CLJS translations!
 * Advanced Compilation
 ** Pay for what you use
 #+begin_src clojure
 (.log js/console "Hello world!")
 #+end_src
-** Closure understand unused literals
 ** Two aspects of `cljs.core` make dead code elimination challenging
 *** All the data structures refer to each other
 *** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
 *** Enter `:lite-mode` ... more on that later!
+** If you're designing a library you should have strong intuition about problematic pattern
+*** Top level side effects
+**** Multimethods
 * Dynamically Constructing Web Components
 #+begin_src javascript
   function Popover() {
