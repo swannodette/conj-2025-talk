@@ -227,7 +227,9 @@
       draft.push({title: "Tweet about it"})
   });
 #+end_src
-* Lightweight Labs Demo
+** ClojureScript now in the ball park of "hand-written" JS in many cases
+*** Without significant amounts of manual intervention / tooling
+* Putting it all together (DEMO)
 ** 13K gzipped CLJS vs. 6mb
 *** Mostly WebComponent glue
 **** Don't need persistent data structures at all
@@ -237,8 +239,9 @@
 * Analyzing the final artifact
 ** Source Map Explorer
 *** Old tool that works perfectly well
-* ClojureScript is a tool
+* ClojureScript adapts!
 ** Use it for jQuery-style development
+** Use it for React-sytle development
 ** Use it for HTMX-style development
 ** Use it for D*-style development
 ** Invent something new that bucks the status quo!
