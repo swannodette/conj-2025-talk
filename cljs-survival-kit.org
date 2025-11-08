@@ -41,10 +41,10 @@
 *** Clojurists were early adopters
 **** Now Functional UI programming status quo
 **** React went from a script tag to an all-encompassing ecosystem
-*** CLJS+React mature solution for SPAs / Mobile apps 
+*** CLJS+React now mature solution for SPAs / Mobile apps 
 ** ... but JavaScript tooling is very "easy" ... not simple
 *** God bless shadow-cljs 🌟, but complexity lurks 🧛
-*** No interest in fixing the fundamental problem
+*** No JS ecosystem interest in fixing the fundamental problem
 **** Just shove the complexity out of sight 🧹
 ***** Until of course ... 🤯
 * Post-apocalyptic Software Dev: A Fairy Tale
@@ -67,7 +67,6 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Morphing
-* Data manipulation
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]]
 #+begin_src clojure
   (require '[goog.dom :as gdom])
@@ -136,7 +135,7 @@
 ** `goog.dom.selection` (unified DOM selection API)
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.ViewportSizeMonitor`
-** `goog.dom.safe` (sanization)
+** `goog.dom.safe` (XSS sanitization)
 * GCL is not familiar
 ** LLMs know a lot about Google Closure Library
 *** I know a bit, but I asked Claude a bunch of questions for this talk!
@@ -156,27 +155,43 @@
 *** All the data structures refer to each other
 *** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
 *** Enter `:lite-mode` ... more on that later!
-** If you're designing a library you should have strong intuition about problematic pattern
-*** Top level side effects
-**** Multimethods
-* Dynamically Constructing Web Components
-#+begin_src javascript
-  function Popover() {
-      return Reflect.construct(HTMLElement,[],PopOver);
-  }
-
-  PopOver.prototype = Object.create(
-      HTMLElement.prototype, {
-          connectedCallback: {
-              configurable: true,
-              "value": function() {
-                  console.log("WHOA!");
-              }
-          }
-      }
-  );
+** If you're designing a library you should have strong intuition about problematic patterns
+*** Top level side effects (non-namespace stuff)
+**** Multimethods / Atoms
+* Lite Mode & Friends
+** Use the original copy-on-write data structures
+*** Much, much simpler implementations
+**** Simpler relationships
+** `:elide-to-string`
+*** printing has to know about all the types
+** Rough numbers `:lite-mode` + `:elide-to-string`
+*** `(.log js/console :foo) is` 5K, bytes after compression
+*** `(seq {...})` 6K brotli
+*** The following is 6K brotli:
+#+begin_src clojure
+  (->> (map inc (range 10))
+    (filter even?)
+    (partition 2)
+    (drop 1)
+    (mapcat identity)
+    into-array))
 #+end_src
-* Building a new foundation
+* Analyzing the final artifact - Source Map Explorer
+* "Plain" JavaScript (~4K gzipped)
+#+begin_src javascript 
+  import {produce} from "immer"
+  const baseState = [
+      {title: "Learn TypeScript", done: true},
+      {title: "Try Immer" done: false}
+  ]
+  const nextState = produce(baseState, draft => {
+      draft[1].done = true
+      draft.push({title: "Tweet about it"})
+  });
+#+end_src
+** ClojureScript now in the ball park of "hand-written" JS in many cases
+*** Without significant amounts of manual intervention / tooling
+* Building a new foundation 🏙
 ** DCE-sensitive ClojureScript libraries
 *** Library authors should be DCE experts
 **** Also test `:lite-mode` true
@@ -197,38 +212,23 @@
 ** Web Components work more or less like native components
 *** Thus they work with every framework
 *** They work with any diffing approach
-* Lite Mode & Friends
-** Use the original copy-on-write data structures
-*** Much, much simpler implementations
-**** Simpler relationships
-** `:elide-to-string`
-*** printing has to know about all the types
-** Rough numbers `:lite-mode` + `:elide-to-string`
-*** `(.log js/console :foo) is` 5K, bytes after compression
-*** `(seq {...})` 6K brotli
-*** The following is 6K brotli:
-#+begin_src clojure
-  (->> (map inc (range 10))
-    (filter even?)
-    (partition 2)
-    (drop 1)
-    (mapcat identity)
-    into-array))
+* Dynamically Constructing Web Components
+#+begin_src javascript
+  function Popover() {
+      return Reflect.construct(HTMLElement,[],PopOver);
+  }
+
+  PopOver.prototype = Object.create(
+      HTMLElement.prototype, {
+          connectedCallback: {
+              configurable: true,
+              "value": function() {
+                  console.log("WHOA!");
+              }
+          }
+      }
+  );
 #+end_src
-* "Plain" JavaScript (~4K gzipped)
-#+begin_src javascript 
-  import {produce} from "immer"
-  const baseState = [
-      {title: "Learn TypeScript", done: true},
-      {title: "Try Immer" done: false}
-  ]
-  const nextState = produce(baseState, draft => {
-      draft[1].done = true
-      draft.push({title: "Tweet about it"})
-  });
-#+end_src
-** ClojureScript now in the ball park of "hand-written" JS in many cases
-*** Without significant amounts of manual intervention / tooling
 * Putting it all together (DEMO)
 ** 13K gzipped CLJS vs. 6mb
 *** Mostly WebComponent glue
@@ -236,9 +236,6 @@
 ** 20X-37X less memory
 ** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 ** Scripting/Paint 1.5:1 vs. 40:1
-* Analyzing the final artifact
-** Source Map Explorer
-*** Old tool that works perfectly well
 * ClojureScript adapts!
 ** Use it for jQuery-style development
 ** Use it for React-sytle development
