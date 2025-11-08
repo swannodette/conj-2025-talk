@@ -10,10 +10,11 @@
   (map #(* % %) (filter even? (take 10 (range))))
   (assoc {:foo 1} :foo 2)
   (doc js/Array.indexOf)
-  (doc js/HTMLElement)
-  (refer-global :only '[Date console])
+  (refer-global :only '[Date console HTMLElement])
   (Date.)
   (.log console "Hello!")
+  (doc console.log)
+  (doc HTMLElement)
 #+end_src  
 * What is ClojureScript? 🤔
 ** A dialect of Clojure that targets JavaScript runtimes
