@@ -10,9 +10,9 @@
 :PROPERTIES:
 :org-remark-id: 16dee1e3
 :org-remark-label: big
-:org-remark-beg: 1790
-:org-remark-end: 1793
-:org-remark-link: [[file:cljs-survival-kit.org::54]]
+:org-remark-beg: 1794
+:org-remark-end: 1797
+:org-remark-link: [[file:cljs-survival-kit.org::51]]
 :org-remark-original-text: 🖥💀🧚
 :END:
 
@@ -20,8 +20,8 @@
 :PROPERTIES:
 :org-remark-id: 7886c212
 :org-remark-label: big
-:org-remark-beg: 8287
-:org-remark-end: 8290
-:org-remark-link: [[file:cljs-survival-kit.org::260]]
+:org-remark-beg: 8290
+:org-remark-end: 8293
+:org-remark-link: [[file:cljs-survival-kit.org::257]]
 :org-remark-original-text: 🖥💀🧚
 :END:
