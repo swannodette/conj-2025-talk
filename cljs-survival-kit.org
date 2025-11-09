@@ -169,7 +169,6 @@
 ** `goog.uri`
 ** `goog.crypt.*`
 ** ...
-
 * GCL is not familiar 👾
 ** LLMs know a lot about Google Closure Library
 *** I asked Claude a bunch of questions for this talk!
