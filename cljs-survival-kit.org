@@ -231,6 +231,18 @@
 #+end_src
 ** CLJS now in ballpark of "hand-written" JS in many cases
 *** Without manual intervention / customized tooling
+* Is `:lite-mode` for me?
+** For existing large applications
+*** Probably not
+** For simpler projects
+*** Maybe
+** Library authors
+*** Yes
+**** Verify that your library is DCE and `:lite-mode` friendly
+** Sprinkle some interactivity on a static website
+*** Absolutely!
+** Considering a different architecture for your web application
+*** Assess!
 * Building a new foundation *(🏜 → 🏙)
 ** DCE-sensitive ClojureScript libraries
 *** Library authors should be familiar with DCE behavior
@@ -269,6 +281,7 @@
   );
 #+end_src
 * CLJS Translation
+* Morphing Demo
 * Putting it all together (DEMO)
 ** 29K gzipped JS vs. 6mb
 *** Mostly WebComponent glue
@@ -281,7 +294,7 @@
 ** Use it for React-style development (2013)
 ** Use it for HTMX-style development (2005)
 ** Use it for D*-style development (2025)
-** Invent something new & alien! 👽
+** Invent something new & alien! (????) 👽
 * Thank You! 🫶
 🖥💀🧚
 # Local Variables:
