@@ -112,7 +112,7 @@
   (def interval (goog.date.Interval. 0 0 3 1))
   (def later (.clone now))
   (.add later interval)
-  (println later)
+  (.log js/console later)
 #+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Internationalization]] 🌎
 #+begin_src clojure
@@ -210,7 +210,7 @@
     (mapcat identity)
     into-array))
 #+end_src
-* This presentation (20K/6K brotli) 🔍
+* This presentation (6K brotli) 🔍
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
