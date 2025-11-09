@@ -29,7 +29,7 @@
 *** Stop drawing dead fish 🐟
 ** Google Closure Compiler Advanced Optimizations
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
-**** After advanced compilation, ~3 bytes
+**** After advanced compilation, a few bytes
 *** More on that later as well ...
 * JavaScript Practice Today 📅
 :PROPERTIES:
@@ -86,7 +86,7 @@
          :margin-top  "10px"
          :text-stroke "1px white"})
 #+end_src
-* Event handling 💬
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Event handling]] 💬
 #+begin_src clojure
   (require '[goog.dom :as gdom])
   (require '[goog.events :as gevents])
@@ -104,7 +104,7 @@
         "mouseleave" (update-button "BYE!")
         "click"      (update-button "OUCH!"))))
 #+end_src
-* Time manipulation 🕰
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Time manipulation]] 🕰
 #+begin_src clojure
   (require '[goog.date])
   (def now (goog.date/DateTime.))
@@ -112,9 +112,9 @@
   (def interval (goog.date.Interval. 0 0 3 1))
   (def later (.clone now))
   (.add later interval)
-  (.log js/console later)
+  (println later)
 #+end_src
-* Internationalization 🌎
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Internationalization]] 🌎
 #+begin_src clojure
   (set! goog.LOCALE "fr")
   (require '[goog.date :as date])
@@ -124,7 +124,7 @@
   (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
   (.log js/console (.format fmt now))
 #+end_src
-* Accessibility ∀
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Accessibility]] ∀
 #+begin_src clojure
   (require '[goog.a11y.aria :as aria]
            '[goog.dom :as gdom]
@@ -141,7 +141,7 @@
       (let [on? (aria/getStateBoolean button State/PRESSED)]
         (aria/setLabel button (if on? "Isn't this really cool?" initial-str)))))
 #+end_src
-* Positioning 🧩
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Positioning]] 🧩
 #+begin_src clojure
   (require '[goog.dom :as gdom]
            '[goog.positioning :as gpos]
