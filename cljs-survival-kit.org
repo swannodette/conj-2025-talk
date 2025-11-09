@@ -133,7 +133,7 @@
   (def button (gdom/getElement "click-me"))
   (def initial-str "This button does something really cool!")
   (aria/setLabel button initial-str)
-  (aria/setState button State/PRESSED (. PressedValues -FALSE))
+  (aria/setState button State/PRESSED PressedValues/FALSE)
   (aria/setState button State/LIVE "polite")
   (gevents/listen button "click"
     (fn [_]
