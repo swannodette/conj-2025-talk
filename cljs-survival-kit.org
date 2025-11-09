@@ -315,6 +315,10 @@
       (.log "Goodbye!"))
 
   (.define customElement "my-el" MyEl)
+
+  (def my-el (gdom/createElement "my-el"))
+  (gdom/appendChild main my-el)
+  (gdom/removeNode my-el)
 #+end_src
 * Putting it all together (DEMO)
 ** 29K gzipped JS vs. 6mb
