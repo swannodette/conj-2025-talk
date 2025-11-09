@@ -9,6 +9,7 @@
   (println "Hello Clojure/conj 2025!!")
   (map #(* % %) (filter even? (take 10 (range))))
   (assoc {:foo 1} :foo 2)
+  (doc assoc)
   (doc js/Array.indexOf)
   (refer-global :only '[Date console HTMLElement])
   (Date.)
