@@ -303,7 +303,19 @@
       }
   );
 #+end_src
-* CLJS Translation
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][CLJS Translation]] 
+#+begin_src clojure
+  (require-macros '[conj-2025.core])
+  (refer-global :only '[console customElements])
+
+  (defel MyEl []
+    (connectedCallbcak [this]
+      (.log "Connected!"))
+    (disconnectedCallback [this]
+      (.log "Goodbye!"))
+
+  (.define customElement "my-el" MyEl)
+#+end_src
 * Putting it all together (DEMO)
 ** 29K gzipped JS vs. 6mb
 *** Mostly WebComponent glue
