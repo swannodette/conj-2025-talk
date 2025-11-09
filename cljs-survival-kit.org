@@ -212,7 +212,7 @@
     (mapcat identity)
     into-array))
 #+end_src
-* This presentation ... 6K brotli 🔍
+* All the Closure code from this presentation ... 6K brotli 🔍
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
@@ -231,8 +231,9 @@
       draft.push({title: "Tweet about it"})
   });
 #+end_src
-** CLJS now in ballpark of "hand-written" JS in many cases
-*** Without manual intervention / customized tooling
+** Can we get to the code-size of "hand-written" JavaScript
+*** :lite-mode promising, and it works if you're careful
+*** We would like it to work transparently in more cases
 * Is `:lite-mode` for me?
 ** For existing large applications
 *** Probably not
