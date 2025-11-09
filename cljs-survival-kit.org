@@ -47,8 +47,8 @@
 **** React went from a script tag to an all-encompassing ecosystem
 *** CLJS+React now mature solution for SPAs / Mobile apps 
 ** ... but JavaScript tooling is "easy" ... not simple
-*** God bless shadow-cljs 🌟, but complexity lurks 🧛
-*** No JS ecosystem interest in fixing the fundamental problems
+*** Bless shadow-cljs 🌟, but complexity lurks 🧛
+*** Low JS ecosystem interest in fixing the fundamental problems
 **** Just shove the complexity out of sight 🧹
 ***** Until of course ... 🤯
 * Post-apocalyptic Software Dev: A Fairy Tale
@@ -70,7 +70,7 @@
 *** CSS patterns / optimizations
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
-*** Morphing
+*** Diffing / Morphing
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]] 📖 ✏
 #+begin_src clojure
   (require '[goog.dom :as gdom])
@@ -92,7 +92,7 @@
 
   (def button (gdom/getElement "click-me"))
   (defn update-button [s]
-    ;;(gdom/setText s)
+    #_(gdom/setText s)
     (gdom/setTextContent button s))
 
   (gevents/listen button
