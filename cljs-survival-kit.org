@@ -257,6 +257,24 @@
 *** Morphdom, Idiomorph, Morphlex
 ** Scoped Reactive Signals?
 *** See Datastar
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Morphing Demo]]
+#+begin_src clojure
+    ;; 13 year old lib from Chris Granger of LightTable
+    (require '[crate.core :as crate]
+             '[goog.dom :as gdom])
+    ;; new, just use globlal libs as libs
+    ;; this library is 2 weeks old
+    (require-global '[morphlex :as morphlex])
+
+    (def button (gdom/getElement "click-me"))
+
+    (defn render-button [new-text]
+      (crate/html
+        [:button#click-me {} new-text]))
+
+    (morphlex/morph button
+      (render-button "CLJS Really Rocks! 🪨  🪨  🪨"))
+#+end_src
 * Light DOM Web Components 🌅
 ** Web Components synonymous with Shadow DOM
 *** Shadow DOM is complected
@@ -283,7 +301,6 @@
   );
 #+end_src
 * CLJS Translation
-* Morphing Demo
 * Putting it all together (DEMO)
 ** 29K gzipped JS vs. 6mb
 *** Mostly WebComponent glue
