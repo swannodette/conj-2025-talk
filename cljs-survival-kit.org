@@ -192,7 +192,7 @@
 *** Top level side effects (non-namespace stuff)
 **** Multimethods / Atoms
 *** "Barreling", i.e. collecting GCL stuff into maps
-**** Remember, library problem stuff, not apps!
+*** `clj->js` inadvertently pull in printing
 * Lite Mode & Friends 🔬
 ** Use the copy-on-write data structures from 2011
 *** Much, much simpler implementations
@@ -232,7 +232,7 @@
   });
 #+end_src
 ** Getting closer to the code-size of "hand-written" JavaScript
-*** :lite-mode experimental, try it, report bugs!
+*** :lite-mode promising but experimental, try it, report bugs!
 **** We would like it to work transparently in more cases
 * Is `:lite-mode` for me?
 ** For existing large applications
