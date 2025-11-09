@@ -212,7 +212,7 @@
     (mapcat identity)
     into-array))
 #+end_src
-* All the Closure code from this presentation ... 6K brotli 🔍
+* Code from these slides ... 6K brotli 🔍
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
@@ -231,9 +231,9 @@
       draft.push({title: "Tweet about it"})
   });
 #+end_src
-** Can we get to the code-size of "hand-written" JavaScript
-*** :lite-mode promising, and it works if you're careful
-*** We would like it to work transparently in more cases
+** Getting closer to the code-size of "hand-written" JavaScript
+*** :lite-mode experimental, try it, report bugs!
+**** We would like it to work transparently in more cases
 * Is `:lite-mode` for me?
 ** For existing large applications
 *** Probably not
