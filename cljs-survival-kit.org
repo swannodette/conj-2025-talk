@@ -254,9 +254,11 @@
 *** Follow and synchronize with evolving standards
 *** We control it! Improve, cleanup as commuinity sees fit
 ** Light DOM morphing
+*** HTMX / Rails Turbo / Pheonix Live View
 *** Morphdom, Idiomorph, Morphlex
 ** Scoped Reactive Signals?
 *** See Datastar
+**** Check out David Yang's talk!
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Morphing Demo]]
 #+begin_src clojure
   ;; 13 year old lib from Chris Granger of LightTable
