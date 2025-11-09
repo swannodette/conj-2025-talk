@@ -187,16 +187,17 @@
 ** Two aspects of `cljs.core` make dead code elimination challenging
 *** All the data structures refer to each other
 *** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
-*** Enter `:lite-mode` ... more on that later!
+*** Enter `:lite-mode`!
 ** If you're designing a library you should have strong intuition about problematic patterns
 *** Top level side effects (non-namespace stuff)
 **** Multimethods / Atoms
 * Lite Mode & Friends 🔬
-** Use the original copy-on-write data structures
+** Use the copy-on-write data structures from 2011
 *** Much, much simpler implementations
 **** Simpler relationships
 ** `:elide-to-string`
 *** printing has to know about all the types
+*** `.toString` impls pull in `pr` machinery
 ** Rough numbers `:lite-mode` + `:elide-to-string`
 *** `(.log js/console :foo) is` 5K, bytes after compression
 *** `(seq {...})` 6K brotli
@@ -209,7 +210,7 @@
     (mapcat identity)
     into-array))
 #+end_src
-* The final artifact (20k/6k brotli) 🔍
+* This presentation (20K/6K brotli) 🔍
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
@@ -237,21 +238,19 @@
 ** Keep Google Closure Library fresh
 *** Get GCL under our finger tips
 *** Follow and synchronize with evolving standards
-*** We control it! Improve, cleanup as commuinity see's fit
+*** We control it! Improve, cleanup as commuinity sees fit
 ** Light DOM morphing
-*** Morphdom
-*** Idiomorph
-*** Morphlex
+*** Morphdom, Idiomorph, Morphlex
 ** Scoped Reactive Signals?
 *** See Datastar
 * Light DOM Web Components 🌅
-** Web Components for a long time synonymous w/ Shadow DOM
+** Web Components synonymous with Shadow DOM
 *** Shadow DOM is complected
 *** If you decomplect
 **** plain Web Components
 ** Web Components work more or less like native components
 *** Thus they work with every framework
-*** They work with any diffing approach
+*** They work with any diffing/morphing approach
 * Dynamically Constructing Web Components
 #+begin_src javascript
   function Popover() {
@@ -269,19 +268,20 @@
       }
   );
 #+end_src
+* CLJS Translation
 * Putting it all together (DEMO)
-** 13K gzipped CLJS vs. 6mb
+** 29K gzipped JS vs. 6mb
 *** Mostly WebComponent glue
 **** Don't need persistent data structures at all
 ** 20X-37X less memory
 ** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 ** Scripting/Paint 1.5:1 vs. 40:1
-* ClojureScript Adapts 
+* ClojureScript Adapts
 ** Use it for jQuery-style development (2006)
 ** Use it for React-style development (2013)
 ** Use it for HTMX-style development (2005)
 ** Use it for D*-style development (2025)
-** Invent something new that bucks the status quo! 👽
+** Invent something new & alien! 👽
 * Thank You! 🫶
 🖥💀🧚
 # Local Variables:
