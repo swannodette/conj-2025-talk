@@ -171,13 +171,13 @@
 ** `goog.crypt.*`
 ** ...
 * GCL is not familiar 👾
-** LLMs know a lot about Google Closure Library
+** ... But LLMs know a lot about Google Closure Library
 *** I asked Claude a bunch of questions for this talk!
 ** The GCL source is very approachable
 *** Really boring code in the best possible way
 *** Lots of comments
 ** HELP WANTED! 👷 GCL docs at the https://clojurescript.org
-*** Update styling, remove the javascript to navigate
+*** Update styling, static pages for everything
 *** Would be great to have examples for all of the UI components with CLJS translations
 * Advanced Compilation 🗜
 ** Compiling `cljs.core` generates 1.3mb of JS
@@ -191,10 +191,12 @@
 ** If you're designing a library you should have strong intuition about problematic patterns
 *** Top level side effects (non-namespace stuff)
 **** Multimethods / Atoms
+*** "Barreling", i.e. collecting GCL stuff into maps
+**** Remember, library problem stuff, not apps!
 * Lite Mode & Friends 🔬
 ** Use the copy-on-write data structures from 2011
 *** Much, much simpler implementations
-**** Simpler relationships
+*** Simpler relationships
 ** `:elide-to-string`
 *** printing has to know about all the types
 *** `.toString` impls pull in `pr` machinery
@@ -210,7 +212,7 @@
     (mapcat identity)
     into-array))
 #+end_src
-* This presentation (6K brotli) 🔍
+* This presentation ... 6K brotli 🔍
 :PROPERTIES:
 :org-image-actual-width: 700
 :END:
@@ -292,10 +294,10 @@
 * ClojureScript Adapts
 ** Use it for jQuery-style development (2006)
 ** Use it for React-style development (2013)
-** Use it for HTMX-style development (2005)
+** Use it for HTMX-style development (2020)
 ** Use it for D*-style development (2025)
 ** Invent something new & alien! (????) 👽
-* Thank You! 🫶
+* Thank You! 🫶 
 🖥💀🧚
 # Local Variables:
 # fill-column: 80
