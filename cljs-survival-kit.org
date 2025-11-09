@@ -305,19 +305,21 @@
 #+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][CLJS Translation]] 
 #+begin_src clojure
-  (require-macros '[conj-2025.core])
-  (require '[goog.dom])
+  (require-macros '[conj-2025.core :refer [defel]])
+  (require '[goog.dom :as gdom])
   (refer-global :only '[console customElements])
 
   (defel MyEl []
-    (connectedCallbcak [this]
+    (connectedCallback [this]
       (.log console "Connected!"))
     (disconnectedCallback [this]
-      (.log console "Goodbye!"))
+      (.log console "Goodbye!")))
 
-  (.define customElement "my-el" MyEl)
+  (.define customElements "my-el" MyEl)
 
+  (def main (gdom/getElement "main"))
   (def my-el (gdom/createElement "my-el"))
+  (gdom/setTextContent my-el "My WebComponent Element")
   (gdom/appendChild main my-el)
   (gdom/removeNode my-el)
 #+end_src
