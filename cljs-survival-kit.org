@@ -240,7 +240,7 @@
 ** For simpler projects
 *** Maybe
 ** Library authors
-*** Yes
+*** Yes!
 **** Verify that your library is DCE and `:lite-mode` friendly
 ** Sprinkle some interactivity on a static website
 *** Absolutely!
