@@ -79,8 +79,8 @@
   (. button -id)
 
   (require '[goog.style :as gstyle])
-  (gstyle/setStyle button "font-size" "16px")
-  (gstyle/setStyle button "border-radius" "25px")
+  (gstyle/setStyle button "font-size" "25px")
+  (gstyle/setStyle button "border-radius" "8px")
   (gstyle/setStyle button
     #js {:margin-left "5px"
          :margin-top  "10px"
@@ -134,7 +134,6 @@
   (def initial-str "This button does something really cool!")
   (aria/setLabel button initial-str)
   (aria/setState button State/PRESSED PressedValues/FALSE)
-  (aria/setState button State/LIVE "polite")
   (gevents/listen button "click"
     (fn [_]
       (aria/toggleState button State/PRESSED)
