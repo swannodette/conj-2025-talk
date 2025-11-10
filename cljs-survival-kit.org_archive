@@ -1,0 +1,43 @@
+#    -*- mode: org -*-
+
+
+Archived entries from file /Users/davidnolen/development/clojure/conj-2025-talk/cljs-survival-kit.org
+
+
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Time manipulation]] 🕰
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-11-10 Mon 18:05
+:ARCHIVE_FILE: ~/development/clojure/conj-2025-talk/cljs-survival-kit.org
+:ARCHIVE_CATEGORY: cljs-survival-kit
+:END:
+#+begin_src clojure
+  (require '[goog.date :as gdate])
+  (def now (gdate/DateTime.))
+  ;; 3 days and 1 hour
+  (def interval (gdate/Interval. 0 0 3 1))
+  (def later (.clone now))
+  (.add later interval)
+  (.log js/console later)
+#+end_src
+
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Accessibility]] ∀
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-11-10 Mon 18:05
+:ARCHIVE_FILE: ~/development/clojure/conj-2025-talk/cljs-survival-kit.org
+:ARCHIVE_CATEGORY: cljs-survival-kit
+:END:
+#+begin_src clojure
+  (require '[goog.a11y.aria :as aria]
+           '[goog.dom :as gdom]
+           '[goog.events :as gevents])
+  (import '[goog.a11y.aria State PressedValues])
+  (def button (gdom/getElement "click-me"))
+  (def initial-str "This button does something really cool!")
+  (aria/setLabel button initial-str)
+  (aria/setState button State/PRESSED PressedValues/FALSE)
+  (gevents/listen button "click"
+    (fn [_]
+      (aria/toggleState button State/PRESSED)
+      (let [on? (aria/getStateBoolean button State/PRESSED)]
+        (aria/setLabel button (if on? "Isn't this really cool?" initial-str)))))
+#+end_src

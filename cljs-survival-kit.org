@@ -104,16 +104,6 @@
         "mouseleave" (update-button "BYE!")
         "click"      (update-button "OUCH!"))))
 #+end_src
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Time manipulation]] 🕰
-#+begin_src clojure
-  (require '[goog.date :as gdate])
-  (def now (gdate/DateTime.))
-  ;; 3 days and 1 hour
-  (def interval (gdate/Interval. 0 0 3 1))
-  (def later (.clone now))
-  (.add later interval)
-  (.log js/console later)
-#+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Internationalization]] 🌎
 #+begin_src clojure
   (set! goog.LOCALE "fr")
@@ -123,22 +113,6 @@
   (def now (date/DateTime.))
   (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
   (.log js/console (.format fmt now))
-#+end_src
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Accessibility]] ∀
-#+begin_src clojure
-  (require '[goog.a11y.aria :as aria]
-           '[goog.dom :as gdom]
-           '[goog.events :as gevents])
-  (import '[goog.a11y.aria State PressedValues])
-  (def button (gdom/getElement "click-me"))
-  (def initial-str "This button does something really cool!")
-  (aria/setLabel button initial-str)
-  (aria/setState button State/PRESSED PressedValues/FALSE)
-  (gevents/listen button "click"
-    (fn [_]
-      (aria/toggleState button State/PRESSED)
-      (let [on? (aria/getStateBoolean button State/PRESSED)]
-        (aria/setLabel button (if on? "Isn't this really cool?" initial-str)))))
 #+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Positioning]] 🏹
 #+begin_src clojure
@@ -157,6 +131,8 @@
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
 * And much, much more 🍬
+** `goog.date.Interval`
+** `goog.a11y.aria`
 ** `goog.dom.getDocumentHeight`, etc.
 ** `goog.dom.selection`
 ** `goog.dom.animation` (split read/write)
