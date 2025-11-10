@@ -347,7 +347,7 @@
 **** Smaller bundles
 *** Just Use ClojureScript
 **** Replicant
-**** shadow-cljs
+**** shadow-grove
 * ClojureScript Adapts
 ** Use it for jQuery-style development (2006)
 ** Use it for React-style development (2013)
