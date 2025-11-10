@@ -4,7 +4,7 @@
 #+email: david.nolen@gmail.com
 #+STARTUP: indent inlineimages
 
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Demo]]
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_repl -re node -r")][Appetizers]] 🧀
 #+begin_src clojure
   (println "Hello Clojure/conj 2025!!")
   (map #(* % %) (filter even? (take 10 (range))))
