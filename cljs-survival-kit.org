@@ -193,7 +193,7 @@
 *** "Barreling", i.e. collecting GCL stuff into maps
 *** `clj->js` pulls in printing due to key conversion
 * Lite Mode & Friends 🔬
-** Use the copy-on-write data structures from 2011
+** Uses the copy-on-write data structures from 2011
 *** Much, much simpler implementations
 *** Simpler relationships
 ** `:elide-to-string`
@@ -233,17 +233,17 @@
 ** Getting closer to the code-size of "hand-written" JavaScript
 *** :lite-mode promising but experimental, try it, report bugs!
 **** We would like it to work transparently in more cases
-* Is `:lite-mode` for me?
-** For existing large applications
+* Is :lite-mode for me?
+** For existing large applications?
 *** Probably not
-** For simpler projects
+** For simpler projects?
 *** Maybe
-** Library authors
+** Library authors?
 *** Yes!
 **** Verify that your library is DCE and `:lite-mode` friendly
-** Sprinkle some interactivity on a static website
+** Need some interactivity on a static website?
 *** Absolutely!
-** Considering a different architecture for your web application
+** Considering a different architecture for your web application?
 *** Assess!
 * Building a new foundation *(🏜 → 🏙)
 ** DCE-sensitive ClojureScript libraries
@@ -252,7 +252,7 @@
 ** Keep Google Closure Library fresh
 *** Get GCL under our finger tips
 *** Follow and synchronize with evolving standards
-*** We control it! Improve, cleanup as commuinity sees fit
+*** We control it! Improve, cleanup as community sees fit
 ** Light DOM morphing
 *** HTMX / Rails Turbo / Pheonix Live View
 *** Morphdom, Idiomorph, Morphlex
