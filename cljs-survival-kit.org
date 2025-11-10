@@ -240,7 +240,9 @@
 *** Maybe
 ** Library authors?
 *** Yes!
-**** Verify that your library is DCE and `:lite-mode` friendly
+**** Verify that your library is DCE friendly
+**** Maybe the world needs a `:lite-mode` friendly lib!
+***** For sophisticated libs, `:lite-mode` is probably uninteresting
 ** Need some interactivity on a static website?
 *** Absolutely!
 ** Considering a different architecture for your web application?
@@ -255,7 +257,10 @@
 *** We control it! Improve, cleanup as community sees fit
 ** Light DOM morphing
 *** HTMX / Rails Turbo / Pheonix Live View
-*** Morphdom, Idiomorph, Morphlex
+*** Morphdom, Idiomorph, Morphlex ...
+*** CLJS solutions
+**** Replicant
+**** shadow-grove
 ** Scoped Reactive Signals?
 *** See Datastar
 **** Check out David Yang's talk!
