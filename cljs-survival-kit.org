@@ -22,7 +22,7 @@
 *** Yummy `clojure.core` 🧁
 *** Differences: host, compilation model
 **** ClojureScript can compile itself into JavaScript
-** Google Closure Library (GCL for short)
+** bundled with Google Closure Library (GCL for short)
 *** More on that later ...
 ** REPL integration with JavaScript runtimes
 *** "Hot reloading" 😴
