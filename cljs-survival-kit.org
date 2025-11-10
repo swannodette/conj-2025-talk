@@ -194,7 +194,7 @@
 [[file:smap.jpg]]
 
 
-* "Plain" JavaScript (~4K gzipped) 
+* "Plain" JavaScript (<4K brotli) 
 #+begin_src javascript 
   import {produce} from "immer"
   const baseState = [
@@ -304,7 +304,7 @@
   (gdom/removeNode my-el)
 #+end_src
 * Putting it all together (DEMO)
-** 29K gzipped JS vs. 6mb
+** <30K brotli JS vs. 6mb
 *** Mostly WebComponent glue
 **** Don't need persistent data structures at all
 ** 20X-37X less memory
