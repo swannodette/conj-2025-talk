@@ -47,7 +47,7 @@
 **** Now Functional UI programming status quo
 **** React went from a script tag to an all-encompassing ecosystem
 *** CLJS+React now mature solution for SPAs / Mobile apps 
-** ... but JavaScript tooling is "easy" ... not simple
+** JavaScript tooling came along for the ride
 *** Bless shadow-cljs 🌟, but complexity lurks 🧛
 *** Low JS ecosystem interest in fixing the fundamental problems
 **** Just shove the complexity out of sight 🧹
@@ -141,7 +141,7 @@
       (let [on? (aria/getStateBoolean button State/PRESSED)]
         (aria/setLabel button (if on? "Isn't this really cool?" initial-str)))))
 #+end_src
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Positioning]] 🧩
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Positioning]] 🏹
 #+begin_src clojure
   (require '[goog.dom :as gdom]
            '[goog.positioning :as gpos]
@@ -157,7 +157,7 @@
   
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
-* And much, much more
+* And much, much more 🍬
 ** `goog.dom.getDocumentHeight`, etc.
 ** `goog.dom.selection`
 ** `goog.dom.animation` (split read/write)
@@ -192,7 +192,7 @@
 *** Top level side effects (non-namespace stuff)
 **** Multimethods / Atoms
 *** "Barreling", i.e. collecting GCL stuff into maps
-*** `clj->js` inadvertently pull in printing
+*** `clj->js` pulls in printing due to key conversion
 * Lite Mode & Friends 🔬
 ** Use the copy-on-write data structures from 2011
 *** Much, much simpler implementations
