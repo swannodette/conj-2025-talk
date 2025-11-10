@@ -106,10 +106,10 @@
 #+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Time manipulation]] 🕰
 #+begin_src clojure
-  (require '[goog.date])
-  (def now (goog.date/DateTime.))
+  (require '[goog.date :as gdate])
+  (def now (gdate/DateTime.))
   ;; 3 days and 1 hour
-  (def interval (goog.date.Interval. 0 0 3 1))
+  (def interval (gdate/Interval. 0 0 3 1))
   (def later (.clone now))
   (.add later interval)
   (.log js/console later)
