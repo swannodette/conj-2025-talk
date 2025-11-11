@@ -2,3 +2,33 @@
 :PROPERTIES:
 :org-remark-file: cljs-survival-kit.org
 :END:
+
+** 🖥💀🧚
+:PROPERTIES:
+:org-remark-id: cbd77e2a
+:org-remark-label: big
+:org-remark-beg: 1718
+:org-remark-end: 1721
+:org-remark-link: [[file:cljs-survival-kit.org::45]]
+:org-remark-original-text: 🖥💀🧚
+:END:
+
+** 🌴/🧟
+:PROPERTIES:
+:org-remark-id: 3038d722
+:org-remark-label: big
+:org-remark-beg: 7343
+:org-remark-end: 7346
+:org-remark-link: [[file:cljs-survival-kit.org::217]]
+:org-remark-original-text: 🌴/🧟
+:END:
+
+** 🖥💀🧚
+:PROPERTIES:
+:org-remark-id: d01c7080
+:org-remark-label: big
+:org-remark-beg: 10900
+:org-remark-end: 10903
+:org-remark-link: [[file:cljs-survival-kit.org::316]]
+:org-remark-original-text: 🖥💀🧚
+:END:
