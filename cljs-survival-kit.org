@@ -217,8 +217,10 @@
 🌴/🧟
 ** Reasonable page load time 🕐
 *** ClojureScript was never that bad
-*** Always competitive with jQuery, ~30K compressed
-** There's also room to improve ...
+**** Always competitive with jQuery, ~30K compressed
+** But there's also room to improve ...
+*** ClojureScripts starts ~20K compressed
+**** Can we cut that in half, a third?
 * Advanced Compilation 🗜
 ** Pay for what you use
 *** If you just print a string, throw the rest away
