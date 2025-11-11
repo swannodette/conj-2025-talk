@@ -213,6 +213,12 @@
   (gdom/appendChild main my-el)
   (gdom/removeNode my-el)
 #+end_src
+* How to signal an oasis in the Software Zombie Wasteland?
+🌴 not 🧟
+** Reasonable page load time 🕐
+*** ClojureScript was never that bad
+*** Always competitive with jQuery, ~30K compressed
+** There's also room to improve ...
 * Advanced Compilation 🗜
 ** Pay for what you use
 *** If you just print a string, throw the rest away
@@ -297,8 +303,8 @@
 * Takeaways
 ** Our approach is one of many - a variety of tradeoffs
 *** Key point: Embraced a Clojure(Script)-centric view
-**** While freely lifting good ideas
-*** Really excited about it
+**** While freely lifting good ideas from elsewhere
+*** Really excited about it!
 **** See David Yang's talk for more details
 ** Clojure(Script)-centric solutions
 *** Simpler tooling
