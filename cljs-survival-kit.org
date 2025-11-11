@@ -275,9 +275,10 @@
 ** If your work is fundamentally >20K compressed, not useful
 *** Few benefits, ClojureScript is already =very good=
 **** Well inside 1MB, 512K, 256K, 128K clubs, 64K clubs
-** <5K, get much smaller and you need to start breaking CLJS expectations
+*** Example: Trivial Replicant is 1/2 size of trivial CSLJ+React
+** <5K, start cutting corners 🩹
 *** `:lite-mode` is just CLJS, everything works
-**** We run the whole test sutie against it
+**** We run most of standard suite against it
 * Putting it all together (DEMO)
 ** Recipe
 *** Move everything to the backend
