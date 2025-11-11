@@ -31,16 +31,6 @@
 *** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
 **** After advanced compilation, a few bytes
 *** More on that later as well ...
-* JavaScript Practice Today 📅
-:PROPERTIES:
-:org-image-actual-width: 700
-:END:
-[[file:fine.jpg]]
-* JavaScript Practice Tomorrow 📆
-:PROPERTIES:
-:org-image-actual-width: 700
-:END:
-[[file:homer.gif]]
 * "Clojure rocks ... JS reaches"
 ** A significant slice of ClojureScript dev is React
 *** Clojurists were early adopters

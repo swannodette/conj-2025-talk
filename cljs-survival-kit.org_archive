@@ -41,3 +41,21 @@ Archived entries from file /Users/davidnolen/development/clojure/conj-2025-talk/
       (let [on? (aria/getStateBoolean button State/PRESSED)]
         (aria/setLabel button (if on? "Isn't this really cool?" initial-str)))))
 #+end_src
+
+* JavaScript Practice Tomorrow 📆
+:PROPERTIES:
+:org-image-actual-width: 700
+:ARCHIVE_TIME: 2025-11-10 Mon 19:28
+:ARCHIVE_FILE: ~/development/clojure/conj-2025-talk/cljs-survival-kit.org
+:ARCHIVE_CATEGORY: cljs-survival-kit
+:END:
+[[file:homer.gif]]
+
+* JavaScript Culture 📅
+:PROPERTIES:
+:org-image-actual-width: 700
+:ARCHIVE_TIME: 2025-11-10 Mon 19:28
+:ARCHIVE_FILE: ~/development/clojure/conj-2025-talk/cljs-survival-kit.org
+:ARCHIVE_CATEGORY: cljs-survival-kit
+:END:
+[[file:fine.jpg]]
