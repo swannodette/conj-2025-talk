@@ -265,7 +265,6 @@
 *** Yes!
 **** Verify that your library is DCE friendly
 **** Maybe the world needs a `:lite-mode` friendly lib!
-***** For sophisticated libs, `:lite-mode` is probably uninteresting
 ** Need some light interactivity on a static website?
 *** Absolutely!
 ** Considering a different architecture for your web application?
