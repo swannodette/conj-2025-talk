@@ -61,6 +61,19 @@
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Diffing / Morphing
+* Modern Browser Dev
+** Things have come a long, long way
+*** IE has a very small market share
+*** Evergreen
+** CSS is pretty good
+*** Nested rules, flex
+**** CSS tooling feels less necessary
+*** More optimization knobs
+**** CSS Grid
+**** CSS Container
+**** CSS content-visible
+** First check the Browser / CSS
+*** Then look at Google Closure Library
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]] 📖 ✏
 #+begin_src clojure
   (require '[goog.dom :as gdom])
