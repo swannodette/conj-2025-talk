@@ -135,7 +135,7 @@
 ** `goog.crypt.*`
 ** ...
 * GCL is not familiar 👾
-** ... But LLMs know a lot about Google Closure Library
+** ... But LLMs know a bit about Google Closure Library
 *** I asked Claude a bunch of questions for this talk!
 ** The GCL source is very approachable
 *** Really boring code in the best possible way
