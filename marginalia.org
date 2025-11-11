@@ -7,8 +7,8 @@
 :PROPERTIES:
 :org-remark-id: 07520175
 :org-remark-label: big
-:org-remark-beg: 1714
-:org-remark-end: 1717
+:org-remark-beg: 1718
+:org-remark-end: 1721
 :org-remark-link: [[file:cljs-survival-kit.org::45]]
 :org-remark-original-text: 🖥💀🧚
 :END:
@@ -17,8 +17,8 @@
 :PROPERTIES:
 :org-remark-id: 1a76d9ce
 :org-remark-label: big
-:org-remark-beg: 10904
-:org-remark-end: 10907
+:org-remark-beg: 10908
+:org-remark-end: 10911
 :org-remark-link: [[file:cljs-survival-kit.org::320]]
 :org-remark-original-text: 🖥💀🧚
 :END:
