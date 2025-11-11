@@ -26,10 +26,9 @@
 *** More on that later ...
 ** REPL integration with JavaScript runtimes
 *** "Hot reloading" 😴
-*** Stop drawing dead fish 🐟
 ** Google Closure Compiler Advanced Optimizations
-*** A trivial `cljs.core` program (+ GCL) is ~3mb of JavaScript
-**** After advanced compilation, a few bytes
+*** A trivial `cljs.core` program (+ GCL) would be ~3mb of JavaScript
+**** After advanced compilation, only a few bytes
 *** More on that later as well ...
 * "Clojure rocks ... JS reaches"
 ** A significant slice of ClojureScript dev is React

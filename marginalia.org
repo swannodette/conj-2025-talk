@@ -7,9 +7,9 @@
 :PROPERTIES:
 :org-remark-id: 07520175
 :org-remark-label: big
-:org-remark-beg: 1726
-:org-remark-end: 1729
-:org-remark-link: [[file:cljs-survival-kit.org::46]]
+:org-remark-beg: 1708
+:org-remark-end: 1711
+:org-remark-link: [[file:cljs-survival-kit.org::45]]
 :org-remark-original-text: 🖥💀🧚
 :END:
 
@@ -17,8 +17,8 @@
 :PROPERTIES:
 :org-remark-id: 1a76d9ce
 :org-remark-label: big
-:org-remark-beg: 11013
-:org-remark-end: 11016
-:org-remark-link: [[file:cljs-survival-kit.org::324]]
+:org-remark-beg: 10995
+:org-remark-end: 10998
+:org-remark-link: [[file:cljs-survival-kit.org::323]]
 :org-remark-original-text: 🖥💀🧚
 :END:
