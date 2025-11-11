@@ -273,7 +273,7 @@
 *** Assess!
 * What :lite-mode is not
 ** If your work is fundamentally >20K compressed, not useful
-*** Few benefits, ClojureScript is already =very good=
+*** Few benefits, ClojureScript already =very good=
 **** Well inside 1MB, 512K, 256K, 128K clubs, 64K clubs
 *** Example: Trivial Replicant is 1/2 size of trivial CSLJ+React
 ** <5K, start cutting corners 🩹
