@@ -54,10 +54,10 @@
 * A Survival Kit: Looking inside 🧰
 ** What's in the box
 *** cljs.core, cljs.string, cljs.pprint, ...
-*** goog, goog.object, goog.string, goog.array, ...
+*** goog.object, goog.string, goog.array, ...
 ** Things we might have forgotten were in the box 👵
 *** DOM APIs
-*** CSS patterns / optimizations
+*** Modern CSS patterns / optimizations
 ** Techniques outside the box 🧠
 *** AJAX / HTMX
 *** Diffing / Morphing
@@ -143,89 +143,13 @@
 ** HELP WANTED! 👷 GCL docs at the https://clojurescript.org
 *** Update styling, static pages for everything
 *** Would be great to have examples for all of the UI components with CLJS translations
-* Advanced Compilation 🗜
-** Pay for what you use
-*** If you just print a string, throw the rest away
-**** `(.log console "Hello!")` should emit only that!
-** ... but some aspects of `cljs.core` make dead code elimination more challenging than it would appear
-*** All the data structures refer to each other
-*** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
-*** Enter `:lite-mode`!
-** If you're designing a library you should have a strong intuition about problematic patterns
-*** Top level side effects (non-namespace stuff)
-**** Multimethods / Atoms
-*** "Barreling", i.e. collecting GCL stuff into maps
-*** `clj->js` pulls in printing due to key conversion
-* Lite Mode & Friends 🔬
-** Uses the copy-on-write data structures from 2011 
-*** Much, much simpler implementations
-*** Simpler relationships
-** `:elide-to-string`
-*** printing has to know about all the types
-*** `.toString` impls pull in `pr` machinery
-** Rough numbers `:lite-mode` + `:elide-to-string`
-*** `(.log js/console :foo) is` 5K, bytes after compression
-*** `(seq {...})` 6K brotli
-*** The following is 6K brotli:
-#+begin_src clojure
-  (->> (map inc (range 10))
-    (filter even?)
-    (partition 2)
-    (drop 1)
-    (mapcat identity)
-    into-array))
-#+end_src
-* Code from these slides ... 6K brotli 🔍
-:PROPERTIES:
-:org-image-actual-width: 700
-:END:
-[[file:smap.jpg]]
-
-
-* "Plain" JavaScript (<4K brotli) 
-#+begin_src javascript 
-  import {produce} from "immer"
-  const baseState = [
-      {title: "Learn TypeScript", done: true},
-      {title: "Try Immer" done: false}
-  ]
-  const nextState = produce(baseState, draft => {
-      draft[1].done = true
-      draft.push({title: "Tweet about it"})
-  });
-#+end_src
-** Getting closer to the code-size of "hand-written" JavaScript
-*** :lite-mode promising but experimental, try it, report bugs!
-**** We would like it to work transparently in more cases
-* Is :lite-mode for me?
-** For existing large applications?
-*** Probably not
-** For simpler projects?
-*** Maybe
-** Library authors?
-*** Yes!
-**** Verify that your library is DCE friendly
-**** Maybe the world needs a `:lite-mode` friendly lib!
-***** For sophisticated libs, `:lite-mode` is probably uninteresting
-** Need some light interactivity on a static website?
-*** Absolutely!
-** Considering a different architecture for your web application?
-*** Assess!
-* Building a new foundation *(🏜 → 🏙)
-** GCL is still relevant
-*** Improve, cleanup as community sees fit
-** DCE-sensitive ClojureScript libraries
-*** Library authors should be familiar with DCE behavior
-**** Also test `:lite-mode` true
-** Light DOM morphing
-*** HTMX / Rails Turbo / Pheonix Live View
+* Wait, what about UI = λ(State)? 🤔
+** HTMX / Rails Turbo / Pheonix Live View / Datastar
+*** You don't need React for this
 *** Morphdom, Idiomorph, Morphlex ...
-*** CLJS-only solutions
-**** Replicant 🎉
-**** shadow-grove
-** Scoped Reactive Signals?
-*** See Datastar
-**** Check out David Yang's talk!
+** Pure CLJS solutions
+*** Replicant 🎉
+*** shadow-grove
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Morphing Demo]] 
 #+begin_src clojure
   ;; 13 year old lib from Chris Granger of LightTable
@@ -244,11 +168,11 @@
   (morphlex/morph button
     (render-button "CLJS Really Rocks! 🪨  🪨  🪨"))
 #+end_src
-* Light DOM Web Components 🌅
+* 🌑 → 🌅
 ** Web Components synonymous with Shadow DOM
 *** Shadow DOM is complected
 *** If you decomplect
-**** plain Web Components
+**** just plain ol' Web Components
 ** Web Components work more or less like native components
 *** Thus they work with every framework
 *** They work with any diffing/morphing approach
@@ -289,27 +213,99 @@
   (gdom/appendChild main my-el)
   (gdom/removeNode my-el)
 #+end_src
+* Advanced Compilation 🗜
+** Pay for what you use
+*** If you just print a string, throw the rest away
+**** `(.log console "Hello!")` should emit only that!
+** ... but some aspects of `cljs.core` make dead code elimination more challenging than it would appear
+*** All the data structures refer to each other
+*** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
+*** Enter `:lite-mode`!
+** If you're designing a library you should have a strong intuition about problematic patterns
+*** Top level side effects (non-namespace stuff)
+**** Multimethods / Atoms
+*** "Barreling", i.e. collecting GCL stuff into maps
+*** `clj->js` pulls in printing due to key conversion
+* Lite Mode & Friends 🔬
+** Uses the copy-on-write data structures from 2011 
+*** Much, much simpler implementations
+*** Simpler relationships
+** `:elide-to-string`
+*** printing has to know about all the types
+*** `.toString` impls pull in `pr` machinery
+** Rough numbers `:lite-mode` + `:elide-to-string`
+*** `(.log js/console :foo) is` 5K, bytes after compression
+*** `(seq {...})` 6K brotli
+*** The following is 6K brotli:
+#+begin_src clojure
+  (->> (map inc (range 10))
+    (filter even?)
+    (partition 2)
+    (drop 1)
+    (mapcat identity)
+    into-array))
+#+end_src
+* Code from these slides ... 6K brotli 🔍
+:PROPERTIES:
+:org-image-actual-width: 700
+:END:
+[[file:smap.jpg]]
+* "Plain" JavaScript (<4K brotli) 
+#+begin_src javascript 
+  import {produce} from "immer"
+  const baseState = [
+      {title: "Learn TypeScript", done: true},
+      {title: "Try Immer" done: false}
+  ]
+  const nextState = produce(baseState, draft => {
+      draft[1].done = true
+      draft.push({title: "Tweet about it"})
+  });
+#+end_src
+** Getting closer to the code-size of "hand-written" JavaScript
+*** :lite-mode promising but experimental, try it, report bugs!
+**** We would like it to work transparently in more cases
+* Is :lite-mode for me?
+** For existing large applications?
+*** Probably not
+** For simpler projects?
+*** Maybe
+** Library authors?
+*** Yes!
+**** Verify that your library is DCE friendly
+**** Maybe the world needs a `:lite-mode` friendly lib!
+***** For sophisticated libs, `:lite-mode` is probably uninteresting
+** Need some light interactivity on a static website?
+*** Absolutely!
+** Considering a different architecture for your web application?
+*** Assess!
 * Putting it all together (DEMO)
-** <30K brotli JS vs. 6mb
-*** Mostly WebComponent glue
-**** Don't need persistent data structures at all
-** 20X-37X less memory
-** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
-** Scripting/Paint 1.5:1 vs. 40:1
-* Tradeoffs
-** One possible approach with a variety of tradeoffs
-** But that's not the tradeoff this talk is about
-*** Building our own future
-**** JavaScript isn't going anywhere and it can work just fine
-***** But the quality of the thing is forever tied up w/ JavaScript de Jour
-*** Clojure(Script)-centric solutions
-**** Simpler tooling
-**** Simpler dependencies
-**** Simpler semantics
-**** Smaller bundles
-*** Just Use ClojureScript
-**** Replicant
-**** shadow-grove
+** Recipe
+*** Move everything to the backend
+*** Simple interactivity can be done via reactive signals
+*** Full page morph on the client (!)
+*** Complex interactivity
+**** Mixture of Web Components / Direct DOM Manipulation
+*** `:lite-mode`
+** Result
+*** <30K brotli JS vs. 6mb
+**** Mostly WebComponent glue
+***** Don't need persistent data structures at all
+*** 20X-37X less memory
+*** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
+*** Scripting/Paint 1.5:1 vs. 40:1
+* Takeaways
+** Our approach is one of many - a variety of tradeoffs
+*** Key point: Embraced a Clojure(Script)-centric view
+**** While freely lifting good ideas
+*** Really excited about it
+**** See David Yang's talk for more details
+** Clojure(Script)-centric solutions
+*** Simpler tooling
+*** Simpler dependencies
+*** Simpler semantics
+*** Smaller bundles
+** Just Use ClojureScript!
 * ClojureScript Adapts
 ** Use it for jQuery-style development (2006)
 ** Use it for React-style development (2013)
