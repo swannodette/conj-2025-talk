@@ -114,8 +114,8 @@
   (def popover (gdom/getElement "popover"))
 
   (gpos/positionAtAnchor
-    button (. Corner -BOTTOM_LEFT)
-    popover (. Corner -TOP_LEFT))
+    button (. Corner -TOP_RIGHT)
+    popover (. Corner -BOTTOM_LEFT))
   
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
@@ -144,15 +144,14 @@
 *** Update styling, static pages for everything
 *** Would be great to have examples for all of the UI components with CLJS translations
 * Advanced Compilation 🗜
-** Compiling `cljs.core` generates 1.3mb of JS
 ** Pay for what you use
 *** If you just print a string, throw the rest away
-*** `(.log console "Hello!")` should emit only that!
-** Two aspects of `cljs.core` make dead code elimination challenging
+**** `(.log console "Hello!")` should emit only that!
+** ... but some aspects of `cljs.core` make dead code elimination more challenging than it would appear
 *** All the data structures refer to each other
 *** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
 *** Enter `:lite-mode`!
-** If you're designing a library you should have strong intuition about problematic patterns
+** If you're designing a library you should have a strong intuition about problematic patterns
 *** Top level side effects (non-namespace stuff)
 **** Multimethods / Atoms
 *** "Barreling", i.e. collecting GCL stuff into maps
@@ -208,28 +207,26 @@
 **** Verify that your library is DCE friendly
 **** Maybe the world needs a `:lite-mode` friendly lib!
 ***** For sophisticated libs, `:lite-mode` is probably uninteresting
-** Need some interactivity on a static website?
+** Need some light interactivity on a static website?
 *** Absolutely!
 ** Considering a different architecture for your web application?
 *** Assess!
 * Building a new foundation *(🏜 → 🏙)
+** GCL is still relevant
+*** Improve, cleanup as community sees fit
 ** DCE-sensitive ClojureScript libraries
 *** Library authors should be familiar with DCE behavior
 **** Also test `:lite-mode` true
-** Keep Google Closure Library fresh
-*** Get GCL under our finger tips
-*** Follow and synchronize with evolving standards
-*** We control it! Improve, cleanup as community sees fit
 ** Light DOM morphing
 *** HTMX / Rails Turbo / Pheonix Live View
 *** Morphdom, Idiomorph, Morphlex ...
-*** CLJS solutions
-**** Replicant
+*** CLJS-only solutions
+**** Replicant 🎉
 **** shadow-grove
 ** Scoped Reactive Signals?
 *** See Datastar
 **** Check out David Yang's talk!
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Morphing Demo]]
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Morphing Demo]] 
 #+begin_src clojure
   ;; 13 year old lib from Chris Granger of LightTable
   (require '[crate.core :as crate]
