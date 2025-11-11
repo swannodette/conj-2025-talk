@@ -214,7 +214,7 @@
   (gdom/removeNode my-el)
 #+end_src
 * How to signal an oasis in the Software Zombie Wasteland?
-🌴 not 🧟
+🌴/🧟
 ** Reasonable page load time 🕐
 *** ClojureScript was never that bad
 *** Always competitive with jQuery, ~30K compressed

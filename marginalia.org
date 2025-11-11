@@ -17,18 +17,18 @@
 :PROPERTIES:
 :org-remark-id: 1a76d9ce
 :org-remark-label: big
-:org-remark-beg: 10448
-:org-remark-end: 10451
+:org-remark-beg: 10444
+:org-remark-end: 10447
 :org-remark-link: [[file:cljs-survival-kit.org::306]]
 :org-remark-original-text: 🖥💀🧚
 :END:
 
-** 🌴 not 🧟
+** 🌴 / 🧟
 :PROPERTIES:
 :org-remark-id: 448ce5a3
 :org-remark-label: big
 :org-remark-beg: 7360
-:org-remark-end: 7367
+:org-remark-end: 7363
 :org-remark-link: [[file:cljs-survival-kit.org::217]]
-:org-remark-original-text: 🌴 not 🧟
+:org-remark-original-text: 🌴 / 🧟
 :END:
