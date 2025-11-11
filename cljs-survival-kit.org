@@ -265,12 +265,19 @@
 *** Maybe
 ** Library authors?
 *** Yes!
-**** Verify that your library is DCE friendly
-**** Maybe the world needs a `:lite-mode` friendly lib!
+*** Verify that your library is DCE friendly
+*** Maybe the world needs a `:lite-mode` centric solution?
 ** Need some light interactivity on a static website?
 *** Absolutely!
 ** Considering a different architecture for your web application?
 *** Assess!
+* What :lite-mode is not
+** If your work is fundamentally >20K compressed, not useful
+*** Few benefits, ClojureScript is already =very good=
+**** Well inside 1MB, 512K, 256K, 128K clubs, 64K clubs
+** <5K, get much smaller and you need to start breaking CLJS expectations
+*** `:lite-mode` is just CLJS, everything works
+**** We run the whole test sutie against it
 * Putting it all together (DEMO)
 ** Recipe
 *** Move everything to the backend
