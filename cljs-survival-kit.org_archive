@@ -59,3 +59,24 @@ Archived entries from file /Users/davidnolen/development/clojure/conj-2025-talk/
 :ARCHIVE_CATEGORY: cljs-survival-kit
 :END:
 [[file:fine.jpg]]
+
+* "Plain" JavaScript (<4K brotli) 
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-11-10 Mon 21:44
+:ARCHIVE_FILE: ~/development/clojure/conj-2025-talk/cljs-survival-kit.org
+:ARCHIVE_CATEGORY: cljs-survival-kit
+:END:
+#+begin_src javascript 
+  import {produce} from "immer"
+  const baseState = [
+      {title: "Learn TypeScript", done: true},
+      {title: "Try Immer" done: false}
+  ]
+  const nextState = produce(baseState, draft => {
+      draft[1].done = true
+      draft.push({title: "Tweet about it"})
+  });
+#+end_src
+** Getting closer to the code-size of "hand-written" JavaScript
+*** :lite-mode promising but experimental, try it, report bugs!
+**** We would like it to work transparently in more cases
