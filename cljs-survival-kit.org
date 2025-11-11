@@ -214,11 +214,13 @@
   (gdom/removeNode my-el)
 #+end_src
 * How to signal an oasis in the Software Zombie Wasteland?
-🌴 not 🧟
+🌴/🧟
 ** Reasonable page load time 🕐
 *** ClojureScript was never that bad
-*** Always competitive with jQuery, ~30K compressed
-** There's also room to improve ...
+**** Always competitive with jQuery, ~30K compressed
+** But there's also room to improve ...
+*** ClojureScripts starts ~20K compressed
+**** Can we cut that in half, a third?
 * Advanced Compilation 🗜
 ** Pay for what you use
 *** If you just print a string, throw the rest away
@@ -304,6 +306,12 @@
 ** Invent something new & alien! (????) 👽
 * Thank You! 🫶 
 🖥💀🧚
+* Resources
+** [[https://google.github.io/closure-library/api/][Google Closure Library API]]
+** [[https://github.com/clojure/closure-library][Google Closure Libraru Source]]
+** [[https://htmx.org][HTMX]], [[https://dev.37signals.com/a-happier-happy-path-in-turbo-with-morphing/][Rails Turbo]], [[https://pragmaticstudio.com/tutorials/the-life-cycle-of-a-phoenix-liveview][Pheonix Live View]]
+** [[https://data-star.dev][Datastar*]]
+** [[https://github.com/bigskysoftware/idiomorph][Idiomorph]]
 # Local Variables:
 # fill-column: 80
 # word-wrap: t
