@@ -181,6 +181,14 @@
   (morphlex/morph button
     (render-button "CLJS Really Rocks! 🪨  🪨  🪨"))
 #+end_src
+* Framework Feudalism ⚔
+** Frameworks keep reinventing the same turnkey components
+*** Over, and over and over again
+** What if we could define custom HTML tags?
+** ... Oh wait we can!
+*** A lot of power if we accept unstyled Web Components
+**** Same we accept CSS resets
+**** With modern CSS, also not that hard
 * 🌑 → 🌅
 ** Web Components synonymous with Shadow DOM
 *** Shadow DOM is complected
