@@ -13,7 +13,7 @@
   (doc js/Array.indexOf)
   (refer-global :only '[Date console HTMLElement])
   (Date.)
-  (.log console "Hello!")
+  (.log console "Hello again!")
   (doc console.log)
   (doc HTMLElement)
 #+end_src  
