@@ -158,7 +158,7 @@
 *** "Barreling", i.e. collecting GCL stuff into maps
 *** `clj->js` pulls in printing due to key conversion
 * Lite Mode & Friends 🔬
-** Uses the copy-on-write data structures from 2011
+** Uses the copy-on-write data structures from 2011 
 *** Much, much simpler implementations
 *** Simpler relationships
 ** `:elide-to-string`
@@ -304,7 +304,7 @@
 ** But that's not the tradeoff this talk is about
 *** Building our own future
 **** JavaScript isn't going anywhere and it can work just fine
-***** But the quality of the thing is forever tied up w/ JS de jour
+***** But the quality of the thing is forever tied up w/ JavaScript de Jour
 *** Clojure(Script)-centric solutions
 **** Simpler tooling
 **** Simpler dependencies
