@@ -63,10 +63,9 @@
 *** Diffing / Morphing
 * Modern Browser Dev
 ** Things have come a long, long way
-*** IE has a very small market share
-*** Evergreen
+*** Evergreen Browsers
 ** CSS is pretty good
-*** Nested rules, flex
+*** Nested rules, flexbox
 **** CSS tooling feels less necessary
 *** More optimization knobs
 **** CSS Grid
@@ -87,24 +86,6 @@
     #js {:margin-left "5px"
          :margin-top  "10px"
          :text-stroke "1px white"})
-#+end_src
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Event handling]] 💬
-#+begin_src clojure
-  (require '[goog.dom :as gdom])
-  (require '[goog.events :as gevents])
-
-  (def button (gdom/getElement "click-me"))
-  (defn update-button [s]
-    #_(gdom/setText s)
-    (gdom/setTextContent button s))
-
-  (gevents/listen button
-    #js ["click", "mouseenter" "mouseleave"]
-    (fn [e]
-      (case (. e -type)
-        "mouseenter" (update-button "HI!")
-        "mouseleave" (update-button "BYE!")
-        "click"      (update-button "OUCH!"))))
 #+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Internationalization]] 🌎
 #+begin_src clojure
@@ -127,8 +108,8 @@
   (def popover (gdom/getElement "popover"))
 
   (gpos/positionAtAnchor
-    button (. Corner -TOP_RIGHT)
-    popover (. Corner -BOTTOM_LEFT))
+    button (. Corner -BOTTOM_LEFT)
+    popover (. Corner -TOP_LEFT))
   
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
@@ -182,7 +163,7 @@
     (render-button "CLJS Really Rocks! 🪨  🪨  🪨"))
 #+end_src
 * Framework Feudalism ⚔
-** Frameworks keep reinventing the same turnkey components
+** Frameworks keep recreating the same components
 *** Over, and over and over again
 ** What if we could define custom HTML tags?
 ** ... Oh wait we can!
@@ -242,20 +223,22 @@
 ** But there's also room to improve ...
 *** ClojureScripts starts ~20K compressed
 **** Can we cut that in half, a third?
-* Advanced Compilation 🗜
-** Pay for what you use
-*** If you just print a string, throw the rest away
-**** `(.log console "Hello!")` should emit only that!
-** ... but some aspects of `cljs.core` make dead code elimination more challenging than it would appear
-*** All the data structures refer to each other
-*** Printing is recursive and dynamic, so the details of `pr-str` pulls in everyone.
-*** Enter `:lite-mode`!
-** If you're designing a library you should have a strong intuition about problematic patterns
-*** Top level side effects (non-namespace stuff)
-**** Multimethods / Atoms
-*** "Barreling", i.e. collecting GCL stuff into maps
-*** `clj->js` pulls in printing due to key conversion
-* Lite Mode & Friends 🔬
+* Putting it all together (DEMO)
+** Recipe
+*** Move everything to the backend
+*** Simple interactivity can be done via reactive signals
+*** Full page morph on the client (!)
+*** Complex interactivity
+**** Mixture of Web Components / Direct DOM Manipulation
+*** `:lite-mode`
+** Result
+*** <30K brotli JS vs. 6mb
+**** Mostly WebComponent glue
+***** Don't need persistent data structures at all
+*** 20X-37X less memory
+*** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
+*** Scripting/Paint 1.5:1 vs. 40:1
+* One More Thing:
 ** Uses the copy-on-write data structures from 2011 
 *** Much, much simpler implementations
 *** Simpler relationships
@@ -263,7 +246,7 @@
 *** printing has to know about all the types
 *** `.toString` impls pull in `pr` machinery
 ** Rough numbers `:lite-mode` + `:elide-to-string`
-*** `(.log js/console :foo) is` 5K, bytes after compression
+*** `(.log console :foo) is` 5K, bytes after compression
 *** `(seq {...})` 6K brotli
 *** The following is 6K brotli:
 #+begin_src clojure
@@ -274,11 +257,6 @@
     (mapcat identity)
     into-array))
 #+end_src
-* Code from these slides ... 6K brotli 🔍
-:PROPERTIES:
-:org-image-actual-width: 700
-:END:
-[[file:smap.jpg]]
 * Is :lite-mode for me?
 ** For existing large applications?
 *** Probably not
@@ -300,21 +278,6 @@
 ** <5K, start cutting corners 🩹
 *** `:lite-mode` is just CLJS, everything works
 **** We run most of standard suite against it
-* Putting it all together (DEMO)
-** Recipe
-*** Move everything to the backend
-*** Simple interactivity can be done via reactive signals
-*** Full page morph on the client (!)
-*** Complex interactivity
-**** Mixture of Web Components / Direct DOM Manipulation
-*** `:lite-mode`
-** Result
-*** <30K brotli JS vs. 6mb
-**** Mostly WebComponent glue
-***** Don't need persistent data structures at all
-*** 20X-37X less memory
-*** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
-*** Scripting/Paint 1.5:1 vs. 40:1
 * Takeaways
 ** Our approach is one of many - a variety of tradeoffs
 *** Key point: Embraced a Clojure(Script)-centric view
