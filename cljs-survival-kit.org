@@ -51,9 +51,9 @@
 **** A) Wits 🐺
 **** B) Bare hands 🙌,
 **** C) simple, composable tools 🛠 
-* Taking stock of the surroundings 👀
+* Take stock of the surroundings 👀
 ** Things have come a long, long way
-*** Evergreen Browsers
+*** Evergreen Browsers (except Safari)
 ** CSS is pretty good
 *** Nested rules, flexbox
 **** CSS tooling feels less necessary
@@ -67,7 +67,7 @@
 * A Survival Kit: Looking inside 🧰
 ** cljs.core 
 ** cljs.test
-** cljs.pprint ...
+** etc.
 ** But we often forget Google Closure Library
 *** Way more than goog.object, goog.array ...
 *** Not designed to replace Web APIs
@@ -103,14 +103,14 @@
   (require '[goog.dom :as gdom]
            '[goog.positioning :as gpos]
            '[goog.style :as gstyle])
-  (import '[goog.positioning Corner AnchoredPosition])
+  (import '[goog.positioning Corner])
 
   (def button (gdom/getElement "click-me"))
   (def popover (gdom/getElement "popover"))
 
   (gpos/positionAtAnchor
-    button (. Corner -BOTTOM_LEFT)
-    popover (. Corner -TOP_LEFT))
+    button (. Corner -TOP_LEFT)
+    popover (. Corner -BOTTOM_LEFT))
   
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
@@ -163,7 +163,7 @@
   (morphlex/morph button
     (render-button "CLJS Really Rocks! 🪨  🪨  🪨"))
 #+end_src
-* Framework Feudalism ⚔
+* Escaping Framework Feudalism ⚔
 ** Frameworks keep recreating the same components
 *** Over, and over and over again
 ** Frameworks don't really interoperate
@@ -203,7 +203,6 @@
 * Putting it all together (DEMO)
 ** Recipe
 *** Move everything to the backend
-*** Simple interactivity can be done via reactive signals
 *** Full page morph on the client (!)
 *** Complex interactivity
 **** Mixture of Web Components / Direct DOM Manipulation
@@ -215,7 +214,15 @@
 *** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 *** Scripting/Paint 1.5:1 vs. 40:1
 * Oh ... One More Thing
-* =:lite-mode=
+** ClojureScript starts at ~20K compresssed
+** Can it get smaller?
+*** How much smaller?
+** *A matter of principle ...
+*** I like to use ClojureScript anywhere
+**** I loved using it on my blog
+*** Sometimes I want to do something lower level
+**** Just want macros etc.
+* Enter =:lite-mode=
 ** Uses the copy-on-write data structures from 2011 
 *** Much, much simpler implementations
 *** Simpler relationships
@@ -245,7 +252,7 @@
 ** If your work is fundamentally >20K compressed, not useful
 *** Few benefits, ClojureScript already =very good=
 **** Good enough for 1MB, 512K, 256K, 128K clubs
-*** Example: Trivial Replicant is 1/3 - 1/2 size of trivial CSLJ+React
+*** Example: Trivial Replicant is 1/3 - 1/2 size of trivial CLJS+React
 ** <5K, start cutting corners 🩹
 *** `:lite-mode` is just CLJS, everything works
 **** We run most of standard suite against it
