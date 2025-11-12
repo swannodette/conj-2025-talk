@@ -14,21 +14,13 @@
 :END:
 
 ** 🌴/🧟
-:PROPERTIES:
-:org-remark-id: 3038d722
-:org-remark-label: big
-:org-remark-beg: 7383
-:org-remark-end: 7386
-:org-remark-link: [[file:cljs-survival-kit.org::219]]
-:org-remark-original-text: 🌴/🧟
-:END:
 
 ** 🖥💀🧚
 :PROPERTIES:
 :org-remark-id: d01c7080
 :org-remark-label: big
-:org-remark-beg: 10131
-:org-remark-end: 10134
-:org-remark-link: [[file:cljs-survival-kit.org::300]]
+:org-remark-beg: 9307
+:org-remark-end: 9310
+:org-remark-link: [[file:cljs-survival-kit.org::271]]
 :org-remark-original-text: 🖥💀🧚
 :END:

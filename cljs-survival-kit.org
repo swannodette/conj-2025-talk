@@ -178,24 +178,7 @@
 ** Web Components work more or less like native components
 *** Thus they work with every framework
 *** They work with any diffing/morphing approach
-* Dynamically Constructing Web Components
-#+begin_src javascript
-  function Popover() {
-      return Reflect.construct(HTMLElement,[],PopOver);
-  }
-
-  PopOver.prototype = Object.create(
-      HTMLElement.prototype, {
-          connectedCallback: {
-              configurable: true,
-              "value": function() {
-                  console.log("WHOA!");
-              }
-          }
-      }
-  );
-#+end_src
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][CLJS Translation]] 
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Web Components with ClojureScript]] 
 #+begin_src clojure
   (require-macros '[conj-2025.core :refer [defel]])
   (require '[goog.dom :as gdom])
@@ -215,14 +198,6 @@
   (gdom/appendChild main my-el)
   (gdom/removeNode my-el)
 #+end_src
-* How to signal an oasis in the Software Zombie Wasteland?
-🌴/🧟
-** Reasonable page load time 🕐
-*** ClojureScript was never that bad
-**** Always competitive with jQuery, ~30K compressed
-** But there's also room to improve ...
-*** ClojureScripts starts ~20K compressed
-**** Can we cut that in half, a third?
 * Putting it all together (DEMO)
 ** Recipe
 *** Move everything to the backend
@@ -238,7 +213,7 @@
 *** 20X-37X less memory
 *** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 *** Scripting/Paint 1.5:1 vs. 40:1
-* One More Thing:
+* One More Thing, =:lite-mode=
 ** Uses the copy-on-write data structures from 2011 
 *** Much, much simpler implementations
 *** Simpler relationships
@@ -257,23 +232,19 @@
     (mapcat identity)
     into-array))
 #+end_src
-* Is :lite-mode for me?
+* Is =:lite-mode= for me?
 ** For existing large applications?
 *** Probably not
 ** For simpler projects?
 *** Maybe
-** Library authors?
-*** Yes!
-*** Verify that your library is DCE friendly
-*** Maybe the world needs a `:lite-mode` centric solution?
 ** Need some light interactivity on a static website?
 *** Absolutely!
 ** Considering a different architecture for your web application?
 *** Assess!
-* What :lite-mode is not
+* What =:lite-mode= is not
 ** If your work is fundamentally >20K compressed, not useful
 *** Few benefits, ClojureScript already =very good=
-**** Well inside 1MB, 512K, 256K, 128K clubs, 64K clubs
+**** Well inside 1MB, 512K, 256K, 128K clubs
 *** Example: Trivial Replicant is 1/2 size of trivial CSLJ+React
 ** <5K, start cutting corners 🩹
 *** `:lite-mode` is just CLJS, everything works
