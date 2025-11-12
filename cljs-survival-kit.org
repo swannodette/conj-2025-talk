@@ -51,17 +51,7 @@
 **** A) Wits 🐺
 **** B) Bare hands 🙌,
 **** C) simple, composable tools 🛠 
-* A Survival Kit: Looking inside 🧰
-** What's in the box
-*** cljs.core, cljs.string, cljs.pprint, ...
-*** goog.object, goog.string, goog.array, ...
-** Things we might have forgotten were in the box 👵
-*** DOM APIs
-*** Modern CSS patterns / optimizations
-** Techniques outside the box 🧠
-*** AJAX / HTMX
-*** Diffing / Morphing
-* Modern Browser Dev
+* Taking stock of the surroundings 👀
 ** Things have come a long, long way
 *** Evergreen Browsers
 ** CSS is pretty good
@@ -71,8 +61,18 @@
 **** CSS Grid
 **** CSS Container
 **** CSS content-visible
-** First check the Browser / CSS
-*** Then look at Google Closure Library
+** Always check what Browser tech offers first
+*** [[https://web-platform-dx.github.io/web-features/][Baseline]]
+*** [[ https://caniuse.com][Can I use ...]]
+* A Survival Kit: Looking inside 🧰
+** cljs.core 
+** cljs.test
+** cljs.pprint ...
+** But we often forget Google Closure Library
+*** Way more than goog.object, goog.array ...
+*** Not designed to replace Web APIs
+**** Ergonomics
+**** Many common problems Browsers don't solve
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Access / Modify the DOM]] 📖 ✏
 #+begin_src clojure
   (require '[goog.dom :as gdom])
@@ -82,6 +82,7 @@
   (require '[goog.style :as gstyle])
   (gstyle/setStyle button "font-size" "25px")
   (gstyle/setStyle button "border-radius" "8px")
+  ;; add something over browsers
   (gstyle/setStyle button
     #js {:margin-left "5px"
          :margin-top  "10px"
@@ -165,11 +166,12 @@
 * Framework Feudalism ⚔
 ** Frameworks keep recreating the same components
 *** Over, and over and over again
-** What if we could define custom HTML tags?
-** ... Oh wait we can!
-*** A lot of power if we accept unstyled Web Components
-**** Same we accept CSS resets
-**** With modern CSS, also not that hard
+** Frameworks don't really interoperate
+*** Components are "reusable" only within these walls
+** Can we could move components between Frameworks?
+*** Oh ... we can!
+**** define custom HTML tags
+***** Web Components!
 * 🌑 → 🌅
 ** Web Components synonymous with Shadow DOM
 *** Shadow DOM is complected
@@ -205,7 +207,6 @@
 *** Full page morph on the client (!)
 *** Complex interactivity
 **** Mixture of Web Components / Direct DOM Manipulation
-*** `:lite-mode`
 ** Result
 *** <30K brotli JS vs. 6mb
 **** Mostly WebComponent glue
@@ -213,7 +214,8 @@
 *** 20X-37X less memory
 *** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 *** Scripting/Paint 1.5:1 vs. 40:1
-* One More Thing, =:lite-mode=
+* Oh ... One More Thing
+* =:lite-mode=
 ** Uses the copy-on-write data structures from 2011 
 *** Much, much simpler implementations
 *** Simpler relationships
@@ -223,7 +225,7 @@
 ** Rough numbers `:lite-mode` + `:elide-to-string`
 *** `(.log console :foo) is` 5K, bytes after compression
 *** `(seq {...})` 6K brotli
-*** The following is 6K brotli:
+*** The following is 6K brotli
 #+begin_src clojure
   (->> (map inc (range 10))
     (filter even?)
@@ -234,9 +236,7 @@
 #+end_src
 * Is =:lite-mode= for me?
 ** For existing large applications?
-*** Probably not
-** For simpler projects?
-*** Maybe
+*** Nope!
 ** Need some light interactivity on a static website?
 *** Absolutely!
 ** Considering a different architecture for your web application?
@@ -244,8 +244,8 @@
 * What =:lite-mode= is not
 ** If your work is fundamentally >20K compressed, not useful
 *** Few benefits, ClojureScript already =very good=
-**** Well inside 1MB, 512K, 256K, 128K clubs
-*** Example: Trivial Replicant is 1/2 size of trivial CSLJ+React
+**** Good enough for 1MB, 512K, 256K, 128K clubs
+*** Example: Trivial Replicant is 1/3 - 1/2 size of trivial CSLJ+React
 ** <5K, start cutting corners 🩹
 *** `:lite-mode` is just CLJS, everything works
 **** We run most of standard suite against it
@@ -271,7 +271,7 @@
 🖥💀🧚
 * Resources
 ** [[https://google.github.io/closure-library/api/][Google Closure Library API]]
-** [[https://github.com/clojure/closure-library][Google Closure Libraru Source]]
+** [[https://github.com/clojure/closure-library][Google Closure Library Source]]
 ** [[https://htmx.org][HTMX]], [[https://dev.37signals.com/a-happier-happy-path-in-turbo-with-morphing/][Rails Turbo]], [[https://pragmaticstudio.com/tutorials/the-life-cycle-of-a-phoenix-liveview][Pheonix Live View]]
 ** [[https://data-star.dev][Datastar*]]
 ** [[https://github.com/bigskysoftware/idiomorph][Idiomorph]]
