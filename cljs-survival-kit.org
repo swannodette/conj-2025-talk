@@ -65,9 +65,10 @@
 *** [[https://web-platform-dx.github.io/web-features/][Baseline]]
 *** [[ https://caniuse.com][Can I use ...]]
 * A Survival Kit: Looking inside 🧰
-** cljs.core 
-** cljs.test
-** etc.
+** cljs.core
+*** cljs.set
+*** cljs.data
+*** cljs.test ...
 ** But we often forget Google Closure Library
 *** Way more than goog.object, goog.array ...
 *** Not designed to replace Web APIs
@@ -142,6 +143,7 @@
 ** HTML -> HTML
 *** HTMX / Rails Turbo / Pheonix Live View / Datastar
 *** Morphdom, Idiomorph, Morphlex ...
+**** Can be used as script tags
 ** Pure CLJS solutions
 *** Replicant 🎉
 *** shadow-grove
@@ -168,18 +170,9 @@
 *** Over, and over and over again
 ** Frameworks don't really interoperate
 *** Components are "reusable" only within these walls
-** Can we could move components between Frameworks?
-*** Oh ... we can!
-**** define custom HTML tags
-***** Web Components!
-* 🌑 → 🌅
-** Web Components synonymous with Shadow DOM
-*** Shadow DOM is complected
-*** If you decomplect
-**** just plain ol' Web Components
-** Web Components work more or less like native components
-*** Thus they work with every framework
-*** They work with any diffing/morphing approach
+** Too bad we can't create custom HTML tags ...
+*** Except we can!
+**** Web Components 🧩
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Web Components with ClojureScript]] 
 #+begin_src clojure
   (require-macros '[conj-2025.core :refer [defel]])
@@ -229,7 +222,7 @@
 ** `:elide-to-string`
 *** printing has to know about all the types
 *** `.toString` impls pull in `pr` machinery
-** Rough numbers `:lite-mode` + `:elide-to-string`
+** Rough numbers, `:lite-mode` + `:elide-to-string`
 *** `(.log console :foo) is` 5K, bytes after compression
 *** `(seq {...})` 6K brotli
 *** The following is 6K brotli
@@ -252,10 +245,11 @@
 ** If your work is fundamentally >20K compressed, not useful
 *** Few benefits, ClojureScript already =very good=
 **** Good enough for 1MB, 512K, 256K, 128K clubs
-*** Example: Trivial Replicant is 1/3 - 1/2 size of trivial CLJS+React
+*** Example: Trivial Replicant is 1/3 to 1/2 size of trivial CLJS+React
 ** <5K, start cutting corners 🩹
 *** `:lite-mode` is just CLJS, everything works
 **** We run most of standard suite against it
+*** checkout squint-cljs
 * Takeaways
 ** Our approach is one of many - a variety of tradeoffs
 *** Key point: Embraced a Clojure(Script)-centric view
