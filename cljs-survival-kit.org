@@ -140,6 +140,7 @@
 *** Update styling, static pages for everything
 *** Would be great to have examples for all of the UI components with CLJS translations
 * Wait, what about UI = λ(State)? 🤔
+** A lot has happened since React (2013)
 ** HTML -> HTML
 *** HTMX / Rails Turbo / Pheonix Live View / Datastar
 *** Morphdom, Idiomorph, Morphlex ...
