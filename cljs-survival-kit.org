@@ -89,16 +89,6 @@
          :margin-top  "10px"
          :text-stroke "1px white"})
 #+end_src
-* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Internationalization]] 🌎
-#+begin_src clojure
-  (set! goog.LOCALE "fr")
-  (require '[goog.date :as date])
-  (import '[goog.i18n DateTimeFormat])
-
-  (def now (date/DateTime.))
-  (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
-  (.log js/console (.format fmt now))
-#+end_src
 * [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Positioning]] 🏹
 #+begin_src clojure
   (require '[goog.dom :as gdom]
@@ -116,9 +106,9 @@
   (gstyle/setStyle popover #js {:visibility "visible"})
 #+end_src
 * And much, much more 🍬
-** `goog.date.Interval`
+** `goog.date`
+** `goog.i18n.DateTimeFormat`
 ** `goog.a11y.aria`
-** `goog.dom.getDocumentHeight`, etc.
 ** `goog.dom.selection`
 ** `goog.dom.animation` (split read/write)
 ** `goog.dom.safe` (XSS sanitization)
@@ -139,7 +129,7 @@
 ** HELP WANTED! 👷 GCL docs at the https://clojurescript.org
 *** Update styling, static pages for everything
 *** Would be great to have examples for all of the UI components with CLJS translations
-* Wait, what about UI = λ(State)? 🤔
+* Wait, what about UI = λ(State)? 🤔 
 ** A lot has happened since React (2013)
 ** HTML -> HTML
 *** HTMX / Rails Turbo / Pheonix Live View / Datastar
@@ -154,7 +144,7 @@
   (require '[crate.core :as crate]
            '[goog.dom :as gdom])
   ;; new, just use globlal libs as libs
-  ;; this library is 2 weeks old
+  ;; this library is 1 weeks old
   (require-global '[morphlex :as morphlex])
 
   (def button (gdom/getElement "click-me"))
@@ -205,7 +195,7 @@
 **** CLJS is 10K
 **** Mostly WebComponent glue
 ***** Don't need persistent data structures at all
-*** 20X-37X less memory
+*** 10X-20X less memory
 *** LCP 0.2s vs. 1.5s - Google thinks 2.5s is good 😭
 *** Scripting/Paint 1.5:1 vs. 40:1
 * Takeaways
@@ -228,6 +218,23 @@
 ** Invent something new & alien! (????) 👽
 * Thank You! 🫶 
 🖥💀🧚
+* Oh ... one more thing
+** `:lite-mode`, `:elide-to-string` experimental compiler flags
+** ClojureScript nornally starts at 20K compressed, cuts this in 1/3-1/2
+** Not for 
+*** Projects already larger than 20K compressed
+** Awesome for
+*** Need a touch of interactivity on a blog
+*** Trying new server-centric approaches
+** The following is 6K brotli
+#+begin_src clojure
+  (->> (map inc (range 10))
+    (filter even?)
+    (partition 2)
+    (drop 1)
+    (mapcat identity)
+    into-array))
+#+end_src
 * Resources
 ** [[https://google.github.io/closure-library/api/][Google Closure Library API]]
 ** [[https://github.com/clojure/closure-library][Google Closure Library Source]]

@@ -148,3 +148,19 @@ Archived entries from file /Users/davidnolen/development/clojure/conj-2025-talk/
 *** `:lite-mode` is just CLJS, everything works
 **** We run most of standard suite against it
 *** checkout squint-cljs
+
+* [[elisp:(my/org-present-inferior-clojure "clojure -M -m cljs.main -d .cljs_browser_repl -r")][Internationalization]] 🌎
+:PROPERTIES:
+:ARCHIVE_TIME: 2025-11-13 Thu 07:20
+:ARCHIVE_FILE: ~/development/clojure/conj-2025-talk/cljs-survival-kit.org
+:ARCHIVE_CATEGORY: cljs-survival-kit
+:END:
+#+begin_src clojure
+  (set! goog.LOCALE "fr")
+  (require '[goog.date :as date])
+  (import '[goog.i18n DateTimeFormat])
+
+  (def now (date/DateTime.))
+  (def fmt (DateTimeFormat. "EEEE MMMM d, y"))
+  (.log js/console (.format fmt now))
+#+end_src
